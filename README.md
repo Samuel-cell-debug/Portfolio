@@ -34,7 +34,7 @@ No special prerequisites needed. Just a modern web browser.
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/your-username/samuel-wilberforce-portfolio.git
+git clone https://github.com/Samuel-cell-debug/samuel-wilberforce-portfolio.git
 ```
 
 2. Navigate to the project directory:
@@ -50,7 +50,7 @@ cd samuel-wilberforce-portfolio
 2. Go to your repository settings
 3. Scroll down to the GitHub Pages section
 4. Select the main branch as the source
-5. Your site will be published at `https://your-username.github.io/samuel-wilberforce-portfolio`
+5. Your site will be published at `https://github.com/Samuel-cell-debug.github.io/samuel-wilberforce-portfolio`
 
 ## 📁 Project Structure
 
@@ -130,7 +130,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Contact
 
-Samuel Wilberforce - [Email](mailto:samuel@example.com) - [LinkedIn](https://linkedin.com/in/samuelwilberforce)
+Samuel Wilberforce - [Email](mailto:successrichman@gmail.com) - [LinkedIn](https://linkedin.com/in/samuelwilberforce)
 
 Project Link: [https://github.com/your-username/samuel-wilberforce-portfolio](https://github.com/your-username/samuel-wilberforce-portfolio)
 
