@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Samuel Wilberforce - Civic Tech Founder & Sustainability Strategist | Ghana</title>
-    <meta name="description" content="Samuel Wilberforce is a civic tech founder and sustainability strategist building inclusive platforms and campaigns that center everyday Ghanaian life. Housing justice advocate, podcast host, and community leader.">
+    <meta name="description" content="Samuel Wilberforce is a civic tech founder and sustainability strategist building inclusive platforms and campaigns that center everyday Ghanaian life.">
     <meta name="keywords" content="civic tech Ghana, sustainable housing, AWS cloud, Salesforce developer, CSR campaigns, housing justice, school governance">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -40,7 +41,7 @@
             font-family: 'Montserrat', sans-serif;
             background-color: var(--background-color);
             color: var(--text-color);
-            transition: all 0.3s ease;
+            scroll-behavior: smooth;
         }
         
         .fade-in {
@@ -112,184 +113,6 @@
             display: none;
         }
         
-        /* Settings Panel Styles */
-        .settings-panel {
-            position: fixed;
-            top: 0;
-            right: -400px;
-            width: 400px;
-            height: 100vh;
-            background: white;
-            box-shadow: -5px 0 15px rgba(0,0,0,0.1);
-            transition: right 0.3s ease-in-out;
-            z-index: 1000;
-            overflow-y: auto;
-        }
-        
-        .settings-panel.open {
-            right: 0;
-        }
-        
-        .settings-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.5);
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s ease-in-out;
-            z-index: 999;
-        }
-        
-        .settings-overlay.active {
-            opacity: 1;
-            visibility: visible;
-        }
-        
-        .settings-toggle {
-            position: fixed;
-            top: 50%;
-            right: 0;
-            background: var(--secondary-color);
-            color: white;
-            padding: 12px 8px;
-            border-top-left-radius: 8px;
-            border-bottom-left-radius: 8px;
-            cursor: pointer;
-            z-index: 998;
-            box-shadow: -2px 0 8px rgba(0,0,0,0.2);
-            transition: all 0.3s ease;
-            writing-mode: vertical-rl;
-            text-orientation: mixed;
-        }
-        
-        .settings-toggle:hover {
-            background: #3a0069;
-            padding-right: 12px;
-        }
-        
-        .admin-access {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: var(--secondary-color);
-            color: white;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-            z-index: 997;
-            transition: all 0.3s ease;
-        }
-        
-        .admin-access:hover {
-            transform: scale(1.1);
-            background: #3a0069;
-        }
-        
-        .section-title {
-            border-left: 4px solid var(--primary-color);
-            padding-left: 12px;
-            margin: 24px 0 16px;
-        }
-        
-        .color-option {
-            width: 28px;
-            height: 28px;
-            border-radius: 50%;
-            display: inline-block;
-            margin: 0 8px 8px 0;
-            cursor: pointer;
-            border: 2px solid transparent;
-            transition: all 0.2s ease;
-        }
-        
-        .color-option.active {
-            border-color: #333;
-            transform: scale(1.1);
-        }
-        
-        .toggle-switch {
-            position: relative;
-            display: inline-block;
-            width: 50px;
-            height: 24px;
-        }
-        
-        .toggle-switch input {
-            opacity: 0;
-            width: 0;
-            height: 0;
-        }
-        
-        .slider {
-            position: absolute;
-            cursor: pointer;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: #ccc;
-            transition: .4s;
-            border-radius: 24px;
-        }
-        
-        .slider:before {
-            position: absolute;
-            content: "";
-            height: 16px;
-            width: 16px;
-            left: 4px;
-            bottom: 4px;
-            background-color: white;
-            transition: .4s;
-            border-radius: 50%;
-        }
-        
-        input:checked + .slider {
-            background-color: var(--primary-color);
-        }
-        
-        input:checked + .slider:before {
-            transform: translateX(26px);
-        }
-        
-        .btn-primary {
-            background: var(--primary-color);
-            color: white;
-            padding: 10px 20px;
-            border-radius: 6px;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-        }
-        
-        .btn-primary:hover {
-            background: #b35917;
-        }
-        
-        .btn-secondary {
-            background: #e5e7eb;
-            color: #333;
-            padding: 10px 20px;
-            border-radius: 6px;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-        }
-        
-        .btn-secondary:hover {
-            background: #d1d5db;
-        }
-        
         /* Mobile menu styles */
         .mobile-menu {
             transition: transform 0.3s ease-out, opacity 0.3s ease-out;
@@ -300,6 +123,27 @@
         .mobile-menu.open {
             transform: translateY(0);
             opacity: 1;
+        }
+        
+        /* Navigation active state */
+        .nav-active {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+        
+        /* Project card styles */
+        .project-card {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .project-image {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            border-top-left-radius: 0.5rem;
+            border-top-right-radius: 0.5rem;
         }
         
         /* Improved touch targets */
@@ -316,128 +160,18 @@
                 justify-content: center;
             }
             
-            .settings-panel {
-                width: 100%;
-                right: -100%;
+            .project-image {
+                height: 160px;
             }
+        }
+        
+        /* Section padding with offset for fixed header */
+        section {
+            scroll-margin-top: 5rem;
         }
     </style>
 </head>
 <body class="font-montserrat">
-    <!-- Admin Access Button -->
-    <div class="admin-access" id="adminAccess">
-        <i class="fas fa-user-cog"></i>
-    </div>
-
-    <!-- Settings Toggle Button -->
-    <div class="settings-toggle" id="settingsToggle">
-        <i class="fas fa-cog"></i> Settings
-    </div>
-
-    <!-- Settings Overlay -->
-    <div class="settings-overlay" id="settingsOverlay"></div>
-
-    <!-- Settings Panel -->
-    <div class="settings-panel" id="settingsPanel">
-        <div class="p-6">
-            <div class="flex justify-between items-center mb-8">
-                <h2 class="text-2xl font-bold text-indigo">Website Settings</h2>
-                <button id="closeSettings" class="text-gray-500 hover:text-gray-700 text-xl">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-            
-            <div class="mb-8">
-                <h3 class="section-title font-semibold text-lg">Color Scheme</h3>
-                <div class="flex flex-wrap mt-3">
-                    <div class="color-option active" style="background-color: #D2691E;" data-color="terracotta"></div>
-                    <div class="color-option" style="background-color: #808000;" data-color="olive"></div>
-                    <div class="color-option" style="background-color: #4B0082;" data-color="indigo"></div>
-                    <div class="color-option" style="background-color: #FFD700;" data-color="gold"></div>
-                    <div class="color-option" style="background-color: #E91E63;" data-color="pink"></div>
-                    <div class="color-option" style="background-color: #2196F3;" data-color="blue"></div>
-                </div>
-            </div>
-            
-            <div class="mb-8">
-                <h3 class="section-title font-semibold text-lg">Layout Preferences</h3>
-                <div class="mt-4 space-y-4">
-                    <div class="flex items-center justify-between">
-                        <label class="text-gray-700">Compact Layout</label>
-                        <label class="toggle-switch">
-                            <input type="checkbox" id="compactLayout">
-                            <span class="slider"></span>
-                        </label>
-                    </div>
-                    
-                    <div class="flex items-center justify-between">
-                        <label class="text-gray-700">Show Animations</label>
-                        <label class="toggle-switch">
-                            <input type="checkbox" id="showAnimations" checked>
-                            <span class="slider"></span>
-                        </label>
-                    </div>
-                    
-                    <div class="flex items-center justify-between">
-                        <label class="text-gray-700">Dark Mode</label>
-                        <label class="toggle-switch">
-                            <input type="checkbox" id="darkMode">
-                            <span class="slider"></span>
-                        </label>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="mb-8">
-                <h3 class="section-title font-semibold text-lg">Content Visibility</h3>
-                <div class="mt-4 space-y-4">
-                    <div class="flex items-center justify-between">
-                        <label class="text-gray-700">Show Blog Section</label>
-                        <label class="toggle-switch">
-                            <input type="checkbox" id="showBlog" checked>
-                            <span class="slider"></span>
-                        </label>
-                    </div>
-                    
-                    <div class="flex items-center justify-between">
-                        <label class="text-gray-700">Show Podcast Section</label>
-                        <label class="toggle-switch">
-                            <input type="checkbox" id="showPodcast" checked>
-                            <span class="slider"></span>
-                        </label>
-                    </div>
-                    
-                    <div class="flex items-center justify-between">
-                        <label class="text-gray-700">Show Skills Section</label>
-                        <label class="toggle-switch">
-                            <input type="checkbox" id="showSkills" checked>
-                            <span class="slider"></span>
-                        </label>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="mb-8">
-                <h3 class="section-title font-semibold text-lg">Font Size</h3>
-                <div class="mt-3">
-                    <input type="range" id="fontSize" min="12" max="18" value="16" class="w-full">
-                    <div class="flex justify-between text-sm text-gray-600 mt-1">
-                        <span>Small</span>
-                        <span>Medium</span>
-                        <span>Large</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="mt-10 pt-6 border-t border-gray-200">
-                <div class="flex space-x-3">
-                    <button class="btn-secondary flex-1" id="resetSettings">Reset</button>
-                    <button class="btn-primary flex-1" id="applySettings">Apply Changes</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <!-- Navigation -->
     <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -447,12 +181,12 @@
                 </div>
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-4">
-                        <a href="#home" class="text-gray-700 hover:text-terracotta px-3 py-2 rounded-md text-sm font-medium transition-colors nav-link">Home</a>
-                        <a href="#about" class="text-gray-700 hover:text-terracotta px-3 py-2 rounded-md text-sm font-medium transition-colors nav-link">About</a>
-                        <a href="#skills" class="text-gray-700 hover:text-terracotta px-3 py-2 rounded-md text-sm font-medium transition-colors nav-link">Skills</a>
-                        <a href="#projects" class="text-gray-700 hover:text-terracotta px-3 py-2 rounded-md text-sm font-medium transition-colors nav-link">Projects</a>
-                        <a href="#podcast" class="text-gray-700 hover:text-terracotta px-3 py-2 rounded-md text-sm font-medium transition-colors nav-link">Podcast</a>
-                        <a href="#contact" class="text-gray-700 hover:text-terracotta px-3 py-2 rounded-md text-sm font-medium transition-colors nav-link">Contact</a>
+                        <a href="#home" class="text-gray-700 hover:text-terracotta px-3 py-2 rounded-md text-sm font-medium transition-colors nav-link" data-section="home">Home</a>
+                        <a href="#about" class="text-gray-700 hover:text-terracotta px-3 py-2 rounded-md text-sm font-medium transition-colors nav-link" data-section="about">About</a>
+                        <a href="#skills" class="text-gray-700 hover:text-terracotta px-3 py-2 rounded-md text-sm font-medium transition-colors nav-link" data-section="skills">Skills</a>
+                        <a href="#projects" class="text-gray-700 hover:text-terracotta px-3 py-2 rounded-md text-sm font-medium transition-colors nav-link" data-section="projects">Projects</a>
+                        <a href="#podcast" class="text-gray-700 hover:text-terracotta px-3 py-2 rounded-md text-sm font-medium transition-colors nav-link" data-section="podcast">Podcast</a>
+                        <a href="#contact" class="text-gray-700 hover:text-terracotta px-3 py-2 rounded-md text-sm font-medium transition-colors nav-link" data-section="contact">Contact</a>
                     </div>
                 </div>
                 <div class="md:hidden">
@@ -465,12 +199,12 @@
         <!-- Mobile menu -->
         <div id="mobile-menu" class="mobile-menu md:hidden hidden bg-white border-t absolute w-full">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="#home" class="block text-gray-700 hover:text-terracotta px-3 py-2 rounded-md text-base font-medium nav-link">Home</a>
-                <a href="#about" class="block text-gray-700 hover:text-terracotta px-3 py-2 rounded-md text-base font-medium nav-link">About</a>
-                <a href="#skills" class="block text-gray-700 hover:text-terracotta px-3 py-2 rounded-md text-base font-medium nav-link">Skills</a>
-                <a href="#projects" class="block text-gray-700 hover:text-terracotta px-3 py-2 rounded-md text-base font-medium nav-link">Projects</a>
-                <a href="#podcast" class="block text-gray-700 hover:text-terracotta px-3 py-2 rounded-md text-base font-medium nav-link">Podcast</a>
-                <a href="#contact" class="block text-gray-700 hover:text-terracotta px-3 py-2 rounded-md text-base font-medium nav-link">Contact</a>
+                <a href="#home" class="block text-gray-700 hover:text-terracotta px-3 py-2 rounded-md text-base font-medium nav-link" data-section="home">Home</a>
+                <a href="#about" class="block text-gray-700 hover:text-terracotta px-3 py-2 rounded-md text-base font-medium nav-link" data-section="about">About</a>
+                <a href="#skills" class="block text-gray-700 hover:text-terracotta px-3 py-2 rounded-md text-base font-medium nav-link" data-section="skills">Skills</a>
+                <a href="#projects" class="block text-gray-700 hover:text-terracotta px-3 py-2 rounded-md text-base font-medium nav-link" data-section="projects">Projects</a>
+                <a href="#podcast" class="block text-gray-700 hover:text-terracotta px-3 py-2 rounded-md text-base font-medium nav-link" data-section="podcast">Podcast</a>
+                <a href="#contact" class="block text-gray-700 hover:text-terracotta px-3 py-2 rounded-md text-base font-medium nav-link" data-section="contact">Contact</a>
             </div>
         </div>
     </nav>
@@ -491,7 +225,7 @@
                     <a href="#projects" class="bg-gold text-indigo px-8 py-3 rounded-full font-semibold hover:bg-yellow-400 transition-colors btn-mobile">
                         View Projects
                     </a>
-                    <a href="#" onclick="downloadCV()" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-indigo transition-colors btn-mobile">
+                    <a href="https://drive.google.com/file/d/1LnW4KmVTyC33FEtWtDkQuf50S4hkZV8k/view?usp=sharing" target="_blank" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-indigo transition-colors btn-mobile">
                         Download CV
                     </a>
                     <a href="#podcast" class="border-2 border-gold text-gold px-8 py-3 rounded-full font-semibold hover:bg-gold hover:text-indigo transition-colors btn-mobile">
@@ -507,14 +241,14 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div class="fade-in">
-                    <div class="w-64 h-64 mx-auto lg:mx-0 bg-gradient-to-br from-terracotta to-olive rounded-full flex items-center justify-center text-white text-6xl">
-                        <i class="fas fa-user"></i>
+                    <div class="w-64 h-64 mx-auto lg:mx-0 rounded-full overflow-hidden border-4 border-terracotta shadow-lg">
+                        <img src="https://drive.google.com/thumbnail?id=1KUXOYyhHiYALFqk438Lza00eAM_vkn-j&sz=w400" alt="Samuel Wilberforce" class="w-full h-full object-cover">
                     </div>
                 </div>
                 <div class="fade-in">
                     <h2 class="text-3xl md:text-4xl font-bold text-indigo mb-6">About Samuel</h2>
                     <p class="text-lg mb-6 leading-relaxed">
-                        Civic tech founder, sustainability strategist, and cloud technology enthusiast building inclusive platforms and campaigns that center everyday Ghanaian life. Samuel combines technical expertise with deep community engagement to create solutions that truly serve people's needs.
+                        Samuel Wilberforce is a driver at a leading pharmaceutical company, the founder of HomeTrack GH, and a certified Virtual Assistant. He is also an ALX AWS/AiCE scholar, passionate about building scalable, inclusive civic tech solutions for housing and emergency response in Ghana.
                     </p>
                     <div class="bg-sand p-6 rounded-lg mb-6">
                         <h3 class="text-xl font-semibold text-terracotta mb-3">Elevator Pitch</h3>
@@ -527,6 +261,7 @@
                         <span class="bg-olive text-white px-4 py-2 rounded-full text-sm">♻️ Sustainability Strategist</span>
                         <span class="bg-indigo text-white px-4 py-2 rounded-full text-sm">💻 Civic Tech Founder</span>
                         <span class="bg-gold text-indigo px-4 py-2 rounded-full text-sm">🎙️ Podcast Host</span>
+                        <span class="bg-blue-500 text-white px-4 py-2 rounded-full text-sm">🚚 Professional Driver</span>
                     </div>
                 </div>
             </div>
@@ -543,7 +278,7 @@
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cors-4 gap-8 mb-16">
                 <div class="fade-in bg-white p-6 rounded-lg shadow-lg card-hover">
                     <div class="text-terracotta text-3xl mb-4">
                         <i class="fas fa-laptop-code"></i>
@@ -614,7 +349,7 @@
                         <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between">
                             <div>
                                 <h4 class="font-semibold text-lg">ALX Virtual Assistant Program</h4>
-                                <p class="text-gray-600">ALX Africa • 2024</p>
+                                <p class="text-gray-600">ALX Africa • 2025</p>
                             </div>
                             <span class="bg-olive text-white px-3 py-1 rounded-full text-sm mt-2 sm:mt-0">Certified</span>
                         </div>
@@ -623,7 +358,7 @@
                         <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between">
                             <div>
                                 <h4 class="font-semibold text-lg">AWS Cloud Practitioner</h4>
-                                <p class="text-gray-600">Amazon Web Services • 2024</p>
+                                <p class="text-gray-600">Amazon Web Services • 2025</p>
                             </div>
                             <span class="bg-indigo text-white px-3 py-1 rounded-full text-sm mt-2 sm:mt-0">In Progress</span>
                         </div>
@@ -632,7 +367,7 @@
                         <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between">
                             <div>
                                 <h4 class="font-semibold text-lg">Salesforce Administrator</h4>
-                                <p class="text-gray-600">Salesforce • 2024</p>
+                                <p class="text-gray-600">Salesforce • 2025</p>
                             </div>
                             <span class="bg-gold text-indigo px-3 py-1 rounded-full text-sm mt-2 sm:mt-0">In Progress</span>
                         </div>
@@ -641,7 +376,7 @@
                         <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between">
                             <div>
                                 <h4 class="font-semibold text-lg">MuleSoft Developer I</h4>
-                                <p class="text-gray-600">MuleSoft • 2024</p>
+                                <p class="text-gray-600">MuleSoft • 2025</p>
                             </div>
                             <span class="bg-terracotta text-white px-3 py-1 rounded-full text-sm mt-2 sm:mt-0">In Progress</span>
                         </div>
@@ -650,7 +385,7 @@
                         <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between">
                             <div>
                                 <h4 class="font-semibold text-lg">AiCE Scholar Program</h4>
-                                <p class="text-gray-600">AI Center of Excellence • 2024</p>
+                                <p class="text-gray-600">AI Center of Excellence • 2025</p>
                             </div>
                             <span class="bg-olive text-white px-3 py-1 rounded-full text-sm mt-2 sm:mt-0">Active</span>
                         </div>
@@ -670,100 +405,111 @@
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="fade-in bg-gradient-to-br from-terracotta to-orange-600 text-white p-8 rounded-lg shadow-lg card-hover">
-                    <div class="text-4xl mb-4">
-                        <i class="fas fa-home"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4">HomeTrack GH</h3>
-                    <p class="mb-4 leading-relaxed">
-                        A civic tech platform connecting 200+ users with affordable housing resources and advocacy tools in Accra.
-                    </p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="bg-white bg-opacity-20 px-3 py-1 rounded-full text-sm">Housing Justice</span>
-                        <span class="bg-white bg-opacity-20 px-3 py-1 rounded-full text-sm">Community Platform</span>
-                    </div>
-                    <a href="#" onclick="viewProject('hometrack')" class="inline-flex items-center text-gold hover:text-yellow-300 font-semibold">
-                        Learn More <i class="fas fa-arrow-right ml-2"></i>
-                    </a>
-                </div>
-
-                <div class="fade-in bg-gradient-to-br from-olive to-green-700 text-white p-8 rounded-lg shadow-lg card-hover">
-                    <div class="text-4xl mb-4">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4">PTA Starter Pack</h3>
-                    <p class="mb-4 leading-relaxed">
-                        Digital toolkit empowering parent-teacher associations across 3 schools with better communication and organization.
-                    </p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="bg-white bg-opacity-20 px-3 py-1 rounded-full text-sm">School Governance</span>
-                        <span class="bg-white bg-opacity-20 px-3 py-1 rounded-full text-sm">Parent Engagement</span>
-                    </div>
-                    <a href="#" onclick="viewProject('pta')" class="inline-flex items-center text-gold hover:text-yellow-300 font-semibold">
-                        Learn More <i class="fas fa-arrow-right ml-2"></i>
-                    </a>
-                </div>
-
-                <div class="fade-in bg-gradient-to-br from-indigo to-purple-700 text-white p-8 rounded-lg shadow-lg card-hover">
-                    <div class="text-4xl mb-4">
-                        <i class="fas fa-recycle"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4">Sustainability Campaigns</h3>
-                    <p class="mb-4 leading-relaxed">
-                        Circular housing and energy-efficient marketing campaigns promoting sustainable construction practices.
-                    </p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="bg-white bg-opacity-20 px-3 py-1 rounded-full text-sm">Circular Economy</span>
-                        <span class="bg-white bg-opacity-20 px-3 py-1 rounded-full text-sm">Green Building</span>
-                    </div>
-                    <a href="#" onclick="viewProject('sustainability')" class="inline-flex items-center text-gold hover:text-yellow-300 font-semibold">
-                        Learn More <i class="fas fa-arrow-right ml-2"></i>
-                    </a>
-                </div>
-
-                <div class="fade-in bg-gradient-to-br from-gold to-yellow-600 text-indigo p-8 rounded-lg shadow-lg card-hover">
-                    <div class="text-4xl mb-4">
-                        <i class="fas fa-university"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4">Ghana Bank Validation Demo</h3>
-                    <p class="mb-4 leading-relaxed">
-                        Smart bank transfer form with dynamic account validation for all licensed Ghanaian banks with real-time feedback.
-                    </p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="bg-indigo bg-opacity-20 px-3 py-1 rounded-full text-sm">FinTech</span>
-                        <span class="bg-indigo bg-opacity-20 px-3 py-1 rounded-full text-sm">Form Validation</span>
-                    </div>
-                    <a href="#" onclick="viewProject('bank-validation')" class="inline-flex items-center text-indigo hover:text-purple-700 font-semibold">
-                        Learn More <i class="fas fa-arrow-right ml-2"></i>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Project Stats -->
-            <div class="mt-16 fade-in">
-                <div class="bg-sand p-8 rounded-lg">
-                    <h3 class="text-2xl font-bold text-indigo mb-8 text-center">Impact by the Numbers</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                        <div class="text-center">
-                            <div class="text-3xl font-bold text-terracotta mb-2">200+</div>
-                            <div class="text-gray-600">Users Connected</div>
-                            <div class="text-sm text-gray-500">via HomeTrack GH</div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- HomeTrack GH -->
+                <div class="fade-in project-card bg-white rounded-lg shadow-lg card-hover">
+                    <div class="project-image" style="background-image: url('https://drive.google.com/thumbnail?id=1KUXOYyhHiYALFqk438Lza00eAM_vkn-j&sz=w600')"></div>
+                    <div class="p-6 flex-grow">
+                        <h3 class="text-2xl font-bold mb-4 text-indigo">HomeTrack GH</h3>
+                        <p class="mb-4 leading-relaxed">
+                            HomeTrack is a mobile-first platform designed to help underserved Ghanaians access affordable housing through credit-building tools, housing goal planning, and voucher-based financing.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-terracotta text-white px-3 py-1 rounded-full text-sm">Housing Justice</span>
+                            <span class="bg-terracotta text-white px-3 py-1 rounded-full text-sm">Community Platform</span>
+                            <span class="bg-terracotta text-white px-3 py-1 rounded-full text-sm">React</span>
+                            <span class="bg-terracotta text-white px-3 py-1 rounded-full text-sm">Node.js</span>
                         </div>
-                        <div class="text-center">
-                            <div class="text-3xl font-bold text-olive mb-2">3</div>
-                            <div class="text-gray-600">Schools Empowered</div>
-                            <div class="text-sm text-gray-500">with PTA tools</div>
+                    </div>
+                    <div class="px-6 pb-6">
+                        <div class="flex justify-between items-center">
+                            <a href="https://samuel-cell-debug.github.io/HomeTrack-GH/" target="_blank" class="inline-flex items-center text-indigo hover:text-purple-700 font-semibold">
+                                View Project <i class="fas fa-external-link-alt ml-2"></i>
+                            </a>
+                            <a href="https://github.com/Samuel-cell-debug/HomeTrack-GH" target="_blank" class="inline-flex items-center text-gray-600 hover:text-gray-800 text-sm">
+                                <i class="fab fa-github mr-1"></i> Code
+                            </a>
                         </div>
-                        <div class="text-center">
-                            <div class="text-3xl font-bold text-indigo mb-2">5</div>
-                            <div class="text-gray-600">Campaigns Launched</div>
-                            <div class="text-sm text-gray-500">for sustainability</div>
+                    </div>
+                </div>
+
+                <!-- Nkwalink Emergency Response Platform -->
+                <div class="fade-in project-card bg-white rounded-lg shadow-lg card-hover">
+                    <div class="project-image" style="background-image: url('https://drive.google.com/thumbnail?id=1HsEGBbEUjsQKVSeVUZenTZpw48O_HcEG&sz=w600')"></div>
+                    <div class="p-6 flex-grow">
+                        <h3 class="text-2xl font-bold mb-4 text-indigo">Nkwalink Emergency Response Platform</h3>
+                        <p class="mb-4 leading-relaxed">
+                            A comprehensive emergency response platform designed for Ghana, enabling citizens to report emergencies and emergency responders to coordinate response efforts efficiently.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-indigo text-white px-3 py-1 rounded-full text-sm">Emergency Response</span>
+                            <span class="bg-indigo text-white px-3 py-1 rounded-full text-sm">Public Safety</span>
+                            <span class="bg-indigo text-white px-3 py-1 rounded-full text-sm">JavaScript</span>
+                            <span class="bg-indigo text-white px-3 py-1 rounded-full text-sm">Firebase</span>
                         </div>
-                        <div class="text-center">
-                            <div class="text-3xl font-bold text-gold mb-2">25+</div>
-                            <div class="text-gray-600">Banks Supported</div>
-                            <div class="text-sm text-gray-500">in validation demo</div>
+                    </div>
+                    <div class="px-6 pb-6">
+                        <div class="flex justify-between items-center">
+                            <a href="https://samuel-cell-debug.github.io/Nkwa-Link/" target="_blank" class="inline-flex items-center text-indigo hover:text-purple-700 font-semibold">
+                                View Project <i class="fas fa-external-link-alt ml-2"></i>
+                            </a>
+                            <a href="https://github.com/Samuel-cell-debug/Nkwa-Link" target="_blank" class="inline-flex items-center text-gray-600 hover:text-gray-800 text-sm">
+                                <i class="fab fa-github mr-1"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SmartWaterGhana -->
+                <div class="fade-in project-card bg-white rounded-lg shadow-lg card-hover">
+                    <div class="project-image" style="background-image: url('https://drive.google.com/thumbnail?id=1B8a2I52rsMAwskSEt4QWmvAq4CSz6gWt&sz=w600')"></div>
+                    <div class="p-6 flex-grow">
+                        <h3 class="text-2xl font-bold mb-4 text-indigo">SmartWaterGhana</h3>
+                        <p class="mb-4 leading-relaxed">
+                            A pilot dashboard for smart water management in Ghanaian households, empowering communities with tech-enabled water solutions that are affordable, scalable, and dignified.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-500 text-white px-3 py-1 rounded-full text-sm">Water Management</span>
+                            <span class="bg-blue-500 text-white px-3 py-1 rounded-full text-sm">Sustainability</span>
+                            <span class="bg-blue-500 text-white px-3 py-1 rounded-full text-sm">IoT</span>
+                            <span class="bg-blue-500 text-white px-3 py-1 rounded-full text-sm">Dashboard</span>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6">
+                        <div class="flex justify-between items-center">
+                            <a href="https://samuel-cell-debug.github.io/smartwater-pilot/" target="_blank" class="inline-flex items-center text-indigo hover:text-purple-700 font-semibold">
+                                View Project <i class="fas fa-external-link-alt ml-2"></i>
+                            </a>
+                            <a href="https://github.com/Samuel-cell-debug/smartwater-pilot" target="_blank" class="inline-flex items-center text-gray-600 hover:text-gray-800 text-sm">
+                                <i class="fab fa-github mr-1"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ghana Bank Validation Demo -->
+                <div class="fade-in project-card bg-white rounded-lg shadow-lg card-hover">
+                    <div class="project-image" style="background-image: url('https://drive.google.com/thumbnail?id=1mn2hFfJcED0jdQ2RQ2xJA9r_oMD63Swt&sz=w600')"></div>
+                    <div class="p-6 flex-grow">
+                        <h3 class="text-2xl font-bold mb-4 text-indigo">Ghana Bank Validation Demo</h3>
+                        <p class="mb-4 leading-relaxed">
+                            This smart bank transfer form dynamically validates account numbers based on the selected bank. It reflects real-world formats used by licensed Ghanaian banks.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-green-600 text-white px-3 py-1 rounded-full text-sm">Financial Tech</span>
+                            <span class="bg-green-600 text-white px-3 py-1 rounded-full text-sm">Validation</span>
+                            <span class="bg-green-600 text-white px-3 py-1 rounded-full text-sm">JavaScript</span>
+                            <span class="bg-green-600 text-white px-3 py-1 rounded-full text-sm">UI/UX</span>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6">
+                        <div class="flex justify-between items-center">
+                            <a href="https://samuel-cell-debug.github.io/ghana-bank-validation-demo/" target="_blank" class="inline-flex items-center text-indigo hover:text-purple-700 font-semibold">
+                                View Project <i class="fas fa-external-link-alt ml-2"></i>
+                            </a>
+                            <a href="https://github.com/Samuel-cell-debug/ghana-bank-validation-demo" target="_blank" class="inline-flex items-center text-gray-600 hover:text-gray-800 text-sm">
+                                <i class="fab fa-github mr-1"></i> Code
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -771,79 +517,80 @@
         </div>
     </section>
 
-    <!-- Podcast & Advocacy -->
-    <section id="podcast" class="py-20 bg-sand">
+    <!-- Podcast Section -->
+    <section id="podcast" class="py-20 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16 fade-in">
-                <h2 class="text-3xl md:text-4xl font-bold text-indigo mb-4">Voices of Hustle Podcast</h2>
+                <h2 class="text-3xl md:text-4xl font-bold text-indigo mb-4">Podcast</h2>
                 <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-                    Amplifying stories of resilience and innovation from Ghanaian communities.
+                    Exploring civic technology, sustainability, and community-driven development in Ghana.
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div class="fade-in">
-                    <div class="bg-white p-8 rounded-lg shadow-lg">
-                        <div class="flex items-center mb-6">
-                            <div class="w-16 h-16 bg-gradient-to-br from-terracotta to-olive rounded-full flex items-center justify-center text-white text-2xl mr-4">
-                                <i class="fas fa-microphone"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-bold text-indigo">Voices of Hustle</h3>
-                                <p class="text-gray-600">Stories that Move Communities</p>
-                            </div>
-                        </div>
-                        
-                        <!-- Podcast Player Demo -->
-                        <div class="bg-gray-100 p-4 rounded-lg mb-6">
-                            <div class="flex items-center justify-between mb-3">
-                                <span class="text-sm text-gray-600">Episode 12: Building for Everyone</span>
-                                <span class="text-sm text-gray-600">24:15</span>
-                            </div>
-                            <div class="flex items-center space-x-4">
-                                <button onclick="togglePlay()" class="bg-terracotta text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-orange-600 transition-colors">
-                                    <i id="play-icon" class="fas fa-play"></i>
-                                </button>
-                                <div class="flex-1 bg-gray-300 h-2 rounded-full">
-                                    <div class="bg-terracotta h-2 rounded-full w-1/3"></div>
-                                </div>
-                                <button class="text-gray-600 hover:text-terracotta">
-                                    <i class="fas fa-volume-up"></i>
-                                </button>
-                            </div>
-                        </div>
-
-                        <a href="#" onclick="openSpotify()" class="bg-green-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-green-700 transition-colors inline-flex items-center">
-                            <i class="fab fa-spotify mr-2"></i>
-                            Listen on Spotify
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="fade-in bg-white p-8 rounded-lg shadow-lg card-hover">
+                    <div class="text-4xl text-terracotta mb-4">
+                        <i class="fas fa-podcast"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-indigo mb-4">The Civic Tech Podcast</h3>
+                    <p class="mb-6 leading-relaxed">
+                        A podcast exploring how technology can be leveraged to solve community challenges, promote civic engagement, and drive sustainable development in Ghana and across Africa.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="bg-terracotta text-white px-3 py-1 rounded-full text-sm">Civic Technology</span>
+                        <span class="bg-olive text-white px-3 py-1 rounded-full text-sm">Community Engagement</span>
+                        <span class="bg-indigo text-white px-3 py-1 rounded-full text-sm">Sustainable Development</span>
+                    </div>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#" class="bg-terracotta text-white px-6 py-3 rounded-full font-semibold hover:bg-orange-700 transition-colors text-center btn-mobile">
+                            <i class="fas fa-play-circle mr-2"></i> Listen Now
+                        </a>
+                        <a href="#" class="border-2 border-terracotta text-terracotta px-6 py-3 rounded-full font-semibold hover:bg-terracotta hover:text-white transition-colors text-center btn-mobile">
+                            <i class="fas fa-rss mr-2"></i> Subscribe
                         </a>
                     </div>
                 </div>
 
                 <div class="fade-in">
-                    <div class="space-y-6">
-                        <div class="bg-white p-6 rounded-lg shadow-lg">
-                            <div class="text-terracotta text-2xl mb-3">
-                                <i class="fas fa-quote-left"></i>
+                    <div class="bg-white p-6 rounded-lg shadow-lg mb-6 card-hover">
+                        <h4 class="text-xl font-semibold text-indigo mb-3">Latest Episodes</h4>
+                        <div class="space-y-4">
+                            <div class="border-l-4 border-terracotta pl-4">
+                                <h5 class="font-medium">Episode 12: Housing Justice in Ghana</h5>
+                                <p class="text-sm text-gray-600">Exploring innovative approaches to affordable housing in urban Ghana.</p>
                             </div>
-                            <p class="text-lg italic mb-4">"We don't just hustle—we build."</p>
-                            <p class="text-gray-600">- Samuel Richmond, on community resilience</p>
+                            <div class="border-l-4 border-olive pl-4">
+                                <h5 class="font-medium">Episode 11: Civic Tech for Emergency Response</h5>
+                                <p class="text-sm text-gray-600">How technology can transform emergency services in West Africa.</p>
+                            </div>
+                            <div class="border-l-4 border-indigo pl-4">
+                                <h5 class="font-medium">Episode 10: Water Sustainability Solutions</h5>
+                                <p class="text-sm text-gray-600">Tech-enabled approaches to water management in Ghanaian communities.</p>
+                            </div>
                         </div>
+                    </div>
 
-                        <div class="bg-white p-6 rounded-lg shadow-lg">
-                            <div class="text-olive text-2xl mb-3">
-                                <i class="fas fa-quote-left"></i>
-                            </div>
-                            <p class="text-lg italic mb-4">"Tech should speak our language."</p>
-                            <p class="text-gray-600">- On inclusive design principles</p>
-                        </div>
-
-                        <div class="bg-white p-6 rounded-lg shadow-lg">
-                            <div class="text-indigo text-2xl mb-3">
-                                <i class="fas fa-quote-left"></i>
-                            </div>
-                            <p class="text-lg italic mb-4">"Every platform we build should amplify dignity, not diminish it."</p>
-                            <p class="text-gray-600">- On civic tech philosophy</p>
+                    <div class="bg-white p-6 rounded-lg shadow-lg card-hover">
+                        <h4 class="text-xl font-semibold text-indigo mb-3">Available On</h4>
+                        <div class="grid grid-cols-3 gap-4">
+                            <a href="#" class="flex justify-center items-center bg-gray-100 hover:bg-gray-200 p-3 rounded-lg transition-colors btn-mobile">
+                                <i class="fab fa-spotify text-2xl text-green-500"></i>
+                            </a>
+                            <a href="#" class="flex justify-center items-center bg-gray-100 hover:bg-gray-200 p-3 rounded-lg transition-colors btn-mobile">
+                                <i class="fab fa-apple text-2xl text-gray-800"></i>
+                            </a>
+                            <a href="#" class="flex justify-center items-center bg-gray-100 hover:bg-gray-200 p-3 rounded-lg transition-colors btn-mobile">
+                                <i class="fab fa-google text-2xl text-blue-500"></i>
+                            </a>
+                            <a href="#" class="flex justify-center items-center bg-gray-100 hover:bg-gray-200 p-3 rounded-lg transition-colors btn-mobile">
+                                <i class="fas fa-podcast text-2xl text-purple-500"></i>
+                            </a>
+                            <a href="#" class="flex justify-center items-center bg-gray-100 hover:bg-gray-200 p-3 rounded-lg transition-colors btn-mobile">
+                                <i class="fab fa-youtube text-2xl text-red-500"></i>
+                            </a>
+                            <a href="#" class="flex justify-center items-center bg-gray-100 hover:bg-gray-200 p-3 rounded-lg transition-colors btn-mobile">
+                                <i class="fab fa-soundcloud text-2xl text-orange-500"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -851,355 +598,211 @@
         </div>
     </section>
 
-    <!-- Contact & Collaborate -->
-    <section id="contact" class="py-20 bg-gray-50">
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-indigo text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16 fade-in">
-                <h2 class="text-3xl md:text-4xl font-bold text-indigo mb-4">Contact & Collaborate</h2>
-                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-                    Ready to build something that matters? Let's connect and create positive change together.
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Let's Connect</h2>
+                <p class="text-lg max-w-2xl mx-auto">
+                    Based in Accra, Ghana. Available for consulting, speaking engagements, and collaborative projects across West Africa and globally.
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
                 <div class="fade-in">
-                    <form onsubmit="submitForm(event)" class="bg-white p-8 rounded-lg shadow-lg">
-                        <div class="mb-6">
-                            <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Name</label>
-                            <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-terracotta focus:border-transparent">
+                    <h3 class="text-2xl font-bold mb-6">Get in Touch</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="text-gold text-xl mr-4 mt-1">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-1">Email</h4>
+                                <a href="mailto:successrichman@gmail.com" class="hover:text-gold transition-colors">successrichman@gmail.com</a>
+                            </div>
                         </div>
-                        <div class="mb-6">
-                            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email</label>
-                            <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-terracotta focus:border-transparent">
+                        <div class="flex items-start">
+                            <div class="text-gold text-xl mr-4 mt-1">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-1">WhatsApp</h4>
+                                <a href="https://wa.me/233599723434" target="_blank" class="hover:text-gold transition-colors">+233 599 723 434</a>
+                            </div>
                         </div>
-                        <div class="mb-6">
-                            <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message</label>
-                            <textarea id="message" name="message" rows="5" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-terracotta focus:border-transparent"></textarea>
+                        <div class="flex items-start">
+                            <div class="text-gold text-xl mr-4 mt-1">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-1">Location</h4>
+                                <p>Accra, Ghana</p>
+                            </div>
                         </div>
-                        <button type="submit" class="w-full bg-terracotta text-white py-3 rounded-lg font-semibold hover:bg-orange-600 transition-colors">
+                    </div>
+
+                    <div class="mt-10">
+                        <h4 class="text-xl font-semibold mb-4">Follow Me</h4>
+                        <div class="flex space-x-4">
+                            <a href="https://github.com/Samuel-cell-debug" target="_blank" class="bg-white bg-opacity-10 hover:bg-opacity-20 w-12 h-12 rounded-full flex items-center justify-center transition-colors">
+                                <i class="fab fa-github text-xl"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/samuel-wilberforce/" target="_blank" class="bg-white bg-opacity-10 hover:bg-opacity-20 w-12 h-12 rounded-full flex items-center justify-center transition-colors">
+                                <i class="fab fa-linkedin-in text-xl"></i>
+                            </a>
+                            <a href="#" class="bg-white bg-opacity-10 hover:bg-opacity-20 w-12 h-12 rounded-full flex items-center justify-center transition-colors">
+                                <i class="fab fa-twitter text-xl"></i>
+                            </a>
+                            <a href="#" class="bg-white bg-opacity-10 hover:bg-opacity-20 w-12 h-12 rounded-full flex items-center justify-center transition-colors">
+                                <i class="fab fa-instagram text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fade-in">
+                    <h3 class="text-2xl font-bold mb-6">Send a Message</h3>
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block mb-2 font-medium">Name</label>
+                            <input type="text" id="name" class="w-full bg-indigo-700 border border-indigo-500 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent" placeholder="Your name">
+                        </div>
+                        <div>
+                            <label for="email" class="block mb-2 font-medium">Email</label>
+                            <input type="email" id="email" class="w-full bg-indigo-700 border border-indigo-500 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent" placeholder="Your email address">
+                        </div>
+                        <div>
+                            <label for="message" class="block mb-2 font-medium">Message</label>
+                            <textarea id="message" rows="5" class="w-full bg-indigo-700 border border-indigo-500 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent" placeholder="Your message"></textarea>
+                        </div>
+                        <button type="submit" class="bg-gold text-indigo px-6 py-3 rounded-lg font-semibold hover:bg-yellow-400 transition-colors w-full">
                             Send Message
                         </button>
                     </form>
-                </div>
-
-                <div class="fade-in space-y-8">
-                    <div>
-                        <h3 class="text-2xl font-bold text-indigo mb-6">Let's Connect</h3>
-                        <div class="space-y-4">
-                            <a href="#" onclick="openLinkedIn()" class="flex items-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
-                                <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white mr-4">
-                                    <i class="fab fa-linkedin-in"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold">LinkedIn</h4>
-                                    <p class="text-gray-600">Professional networking</p>
-                                </div>
-                            </a>
-
-                            <a href="#" onclick="openGitHub()" class="flex items-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
-                                <div class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center text-white mr-4">
-                                    <i class="fab fa-github"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold">GitHub</h4>
-                                    <p class="text-gray-600">Code repositories</p>
-                                </div>
-                            </a>
-
-                            <a href="#" onclick="openMedium()" class="flex items-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
-                                <div class="w-12 h-12 bg-black rounded-full flex items-center justify-center text-white mr-4">
-                                    <i class="fab fa-medium-m"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold">Medium</h4>
-                                    <p class="text-gray-600">Articles & insights</p>
-                                </div>
-                            </a>
-
-                            <a href="#" onclick="openWhatsApp()" class="flex items-center p-4 bg-white rounded-lg shadow hover:shadow-lg transition-shadow">
-                                <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-white mr-4">
-                                    <i class="fab fa-whatsapp"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-semibold">WhatsApp</h4>
-                                    <p class="text-gray-600">Direct messaging</p>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="bg-white p-6 rounded-lg shadow-lg">
-                        <h4 class="text-lg font-semibold text-indigo mb-3">Based in Accra, Ghana</h4>
-                        <p class="text-gray-600 mb-4">
-                            Available for consulting, speaking engagements, and collaborative projects across West Africa and globally.
-                        </p>
-                        <div class="flex items-center text-terracotta">
-                            <i class="fas fa-map-marker-alt mr-2"></i>
-                            <span>Accra, Ghana</span>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-indigo text-white py-12">
+    <footer class="bg-gray-900 text-white py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center">
                 <h3 class="text-2xl font-bold mb-4">Let's build technology that serves communities.</h3>
-                <p class="text-lg mb-8">Samuel Wilberforce - Civic Tech Founder & Sustainability Strategist</p>
-                <div class="flex justify-center space-x-6 mb-8">
-                    <a href="#" onclick="openLinkedIn()" class="text-white hover:text-gold transition-colors">
-                        <i class="fab fa-linkedin-in text-2xl"></i>
-                    </a>
-                    <a href="#" onclick="openGitHub()" class="text-white hover:text-gold transition-colors">
-                        <i class="fab fa-github text-2xl"></i>
-                    </a>
-                    <a href="#" onclick="openMedium()" class="text-white hover:text-gold transition-colors">
-                        <i class="fab fa-medium-m text-2xl"></i>
-                    </a>
-                    <a href="#" onclick="openWhatsApp()" class="text-white hover:text-gold transition-colors">
-                        <i class="fab fa-whatsapp text-2xl"></i>
-                    </a>
-                </div>
-                <p class="text-sm opacity-75">
-                    © 2024 Samuel Wilberforce. Building technology for dignity and resilience.
-                </p>
+                <p class="text-lg mb-6">Samuel Wilberforce - Civic Tech Founder & Sustainability Strategist</p>
+                <p class="text-gray-400">© 2024 Samuel Wilberforce. Building technology for dignity and resilience.</p>
             </div>
         </div>
     </footer>
 
     <script>
-        // Settings Panel Functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const settingsToggle = document.getElementById('settingsToggle');
-            const settingsPanel = document.getElementById('settingsPanel');
-            const settingsOverlay = document.getElementById('settingsOverlay');
-            const closeSettings = document.getElementById('closeSettings');
-            const adminAccess = document.getElementById('adminAccess');
-            const applySettings = document.getElementById('applySettings');
-            const resetSettings = document.getElementById('resetSettings');
-            
-            // Initially hide the settings toggle (only admin button visible)
-            settingsToggle.style.display = 'none';
-            
-            // Toggle settings panel
-            function openSettings() {
-                settingsPanel.classList.add('open');
-                settingsOverlay.classList.add('active');
-                document.body.style.overflow = 'hidden';
-            }
-            
-            function closeSettingsPanel() {
-                settingsPanel.classList.remove('open');
-                settingsOverlay.classList.remove('active');
-                document.body.style.overflow = 'auto';
-            }
-            
-            // Admin access to show settings toggle
-            adminAccess.addEventListener('click', function() {
-                const isVisible = settingsToggle.style.display === 'block';
-                settingsToggle.style.display = isVisible ? 'none' : 'block';
-                
-                // Visual feedback
-                if (!isVisible) {
-                    this.innerHTML = '<i class="fas fa-eye-slash"></i>';
-                    this.title = 'Hide Settings Button';
-                } else {
-                    this.innerHTML = '<i class="fas fa-eye"></i>';
-                    this.title = 'Show Settings Button';
-                }
-            });
-            
-            settingsToggle.addEventListener('click', openSettings);
-            closeSettings.addEventListener('click', closeSettingsPanel);
-            settingsOverlay.addEventListener('click', closeSettingsPanel);
-            
-            // Color scheme selection
-            const colorOptions = document.querySelectorAll('.color-option');
-            colorOptions.forEach(option => {
-                option.addEventListener('click', function() {
-                    colorOptions.forEach(opt => opt.classList.remove('active'));
-                    this.classList.add('active');
-                    
-                    // Apply color scheme
-                    const color = this.getAttribute('data-color');
-                    document.documentElement.style.setProperty('--primary-color', getColorValue(color));
-                });
-            });
-            
-            function getColorValue(colorName) {
-                const colors = {
-                    'terracotta': '#D2691E',
-                    'olive': '#808000',
-                    'indigo': '#4B0082',
-                    'gold': '#FFD700',
-                    'pink': '#E91E63',
-                    'blue': '#2196F3'
-                };
-                return colors[colorName] || '#D2691E';
-            }
-            
-            // Settings application
-            applySettings.addEventListener('click', function() {
-                // Apply dark mode
-                if (document.getElementById('darkMode').checked) {
-                    document.body.classList.add('dark-mode');
-                } else {
-                    document.body.classList.remove('dark-mode');
-                }
-                
-                // Apply compact layout
-                if (document.getElementById('compactLayout').checked) {
-                    document.body.classList.add('compact-layout');
-                } else {
-                    document.body.classList.remove('compact-layout');
-                }
-                
-                // Apply animations preference
-                if (document.getElementById('showAnimations').checked) {
-                    document.body.classList.remove('no-animations');
-                } else {
-                    document.body.classList.add('no-animations');
-                }
-                
-                // Apply font size
-                const fontSize = document.getElementById('fontSize').value;
-                document.body.style.fontSize = fontSize + 'px';
-                
-                closeSettingsPanel();
-                
-                // Show confirmation
-                alert('Settings applied successfully!');
-            });
-            
-            // Reset settings
-            resetSettings.addEventListener('click', function() {
-                // Reset all toggles
-                document.getElementById('darkMode').checked = false;
-                document.getElementById('compactLayout').checked = false;
-                document.getElementById('showAnimations').checked = true;
-                document.getElementById('showBlog').checked = true;
-                document.getElementById('showPodcast').checked = true;
-                document.getElementById('showSkills').checked = true;
-                
-                // Reset font size
-                document.getElementById('fontSize').value = 16;
-                
-                // Reset color option
-                colorOptions.forEach(opt => opt.classList.remove('active'));
-                document.querySelector('[data-color="terracotta"]').classList.add('active');
-                
-                // Reset applied styles
-                document.body.classList.remove('dark-mode', 'compact-layout', 'no-animations');
-                document.body.style.fontSize = '';
-                document.documentElement.style.setProperty('--primary-color', '#D2691E');
-                
-                alert('Settings have been reset to default values.');
-            });
-            
-            // Prevent settings panel from closing when clicking inside it
-            settingsPanel.addEventListener('click', function(e) {
-                e.stopPropagation();
-            });
-            
-            // Mobile menu toggle
-            document.getElementById('mobile-menu-btn').addEventListener('click', function() {
-                const mobileMenu = document.getElementById('mobile-menu');
-                mobileMenu.classList.toggle('hidden');
-                mobileMenu.classList.toggle('open');
-            });
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('open');
+        });
 
-            // Close mobile menu when clicking on a link
-            document.querySelectorAll('#mobile-menu a').forEach(link => {
-                link.addEventListener('click', function() {
-                    document.getElementById('mobile-menu').classList.add('hidden');
-                    document.getElementById('mobile-menu').classList.remove('open');
-                });
-            });
-
-            // Fade in animation on scroll
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
-
-            const observer = new IntersectionObserver(function(entries) {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                    }
-                });
-            }, observerOptions);
-
-            document.querySelectorAll('.fade-in').forEach(el => {
-                observer.observe(el);
-            });
-
-            // Smooth scrolling for navigation links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    }
-                });
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.getElementById('mobile-menu').classList.add('hidden');
+                document.getElementById('mobile-menu').classList.remove('open');
             });
         });
 
-        // Interactive functions
-        function downloadCV() {
-            alert('CV download functionality would be implemented here with your actual CV URL.');
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    
+                    // Update navigation active state
+                    const sectionId = entry.target.getAttribute('id');
+                    document.querySelectorAll('.nav-link').forEach(link => {
+                        if (link.getAttribute('data-section') === sectionId) {
+                            link.classList.add('nav-active');
+                        } else {
+                            link.classList.remove('nav-active');
+                        }
+                    });
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth scrolling for navigation links with offset for fixed header
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // Close mobile menu if open
+                    if (window.innerWidth < 768) {
+                        document.getElementById('mobile-menu').classList.add('hidden');
+                        document.getElementById('mobile-menu').classList.remove('open');
+                    }
+                    
+                    const headerOffset = 80;
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Form submission
+        const contactForm = document.querySelector('form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const name = document.getElementById('name').value;
+                alert(`Thank you ${name}! Your message has been sent. I'll get back to you soon.`);
+                this.reset();
+            });
         }
 
-        function togglePlay() {
-            const playIcon = document.getElementById('play-icon');
-            if (playIcon.classList.contains('fa-play')) {
-                playIcon.classList.remove('fa-play');
-                playIcon.classList.add('fa-pause');
-                alert('Playing podcast episode...');
-            } else {
-                playIcon.classList.remove('fa-pause');
-                playIcon.classList.add('fa-play');
-                alert('Playback paused.');
-            }
+        // Initialize navigation active state
+        function setActiveNav() {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            let currentSection = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (window.scrollY >= (sectionTop - 100)) {
+                    currentSection = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('nav-active');
+                if (link.getAttribute('data-section') === currentSection) {
+                    link.classList.add('nav-active');
+                }
+            });
         }
 
-        function openSpotify() {
-            alert('Opening Spotify podcast page...');
-        }
-
-        function viewProject(project) {
-            alert(`Viewing project: ${project}`);
-        }
-
-        function submitForm(event) {
-            event.preventDefault();
-            const name = document.getElementById('name').value;
-            alert(`Thank you ${name}! Your message has been sent.`);
-            event.target.reset();
-        }
-
-        function openLinkedIn() {
-            alert('Opening LinkedIn profile...');
-        }
-
-        function openGitHub() {
-            alert('Opening GitHub profile...');
-        }
-
-        function openMedium() {
-            alert('Opening Medium profile...');
-        }
-
-        function openWhatsApp() {
-            alert('Opening WhatsApp chat...');
-        }
+        window.addEventListener('scroll', setActiveNav);
+        window.addEventListener('load', setActiveNav);
     </script>
 </body>
 </html>
