@@ -1,393 +1,157 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <style>
+    /* Temporary debug style */
+    body { 
+        border: 5px solid green !important; 
+    }
+    .custom-navbar {
+        background: red !important;
+    }
+</style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Samuel Wilberforce - Civic Tech Founder & Sustainability Strategist | Ghana</title>
-    <meta name="description" content="Samuel Wilberforce is a civic tech founder and sustainability strategist building inclusive platforms and campaigns that center everyday Ghanaian life.">
-    <meta name="keywords" content="civic tech Ghana, sustainable housing, AWS cloud, Salesforce developer, CSR campaigns, housing justice, school governance">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        terracotta: '#D2691E',
-                        olive: '#808000',
-                        sand: '#F4E4BC',
-                        indigo: '#4B0082',
-                        gold: '#FFD700'
-                    },
-                    fontFamily: {
-                        'montserrat': ['Montserrat', 'sans-serif']
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        :root {
-            --primary-color: #D2691E;
-            --secondary-color: #4B0082;
-            --accent-color: #808000;
-            --background-color: #F4E4BC;
-            --text-color: #333;
-        }
-        
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background-color: var(--background-color);
-            color: var(--text-color);
-            scroll-behavior: smooth;
-        }
-        
-        .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-        
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        .hero-bg {
-            background: linear-gradient(135deg, rgba(210, 105, 30, 0.9), rgba(75, 0, 130, 0.8)), 
-                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23F4E4BC" width="1200" height="600"/><circle fill="%23D2691E" opacity="0.3" cx="200" cy="150" r="80"/><circle fill="%23808000" opacity="0.4" cx="800" cy="300" r="120"/><circle fill="%23FFD700" opacity="0.2" cx="1000" cy="100" r="60"/></svg>');
-            background-size: cover;
-            background-position: center;
-        }
-        
-        .card-hover {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .card-hover:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-        }
-        
-        .skill-badge {
-            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 25px;
-            font-size: 0.875rem;
-            font-weight: 500;
-            margin: 0.25rem;
-            display: inline-block;
-        }
-        
-        .timeline-item {
-            position: relative;
-            padding-left: 2rem;
-            margin-bottom: 1.5rem;
-        }
-        
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0.5rem;
-            width: 12px;
-            height: 12px;
-            background: var(--primary-color);
-            border-radius: 50%;
-        }
-        
-        .timeline-item::after {
-            content: '';
-            position: absolute;
-            left: 5px;
-            top: 1.2rem;
-            width: 2px;
-            height: calc(100% + 1rem);
-            background: #E5E7EB;
-        }
-        
-        .timeline-item:last-child::after {
-            display: none;
-        }
-        
-        /* Mobile menu styles */
-        .mobile-menu {
-            transition: transform 0.3s ease-out, opacity 0.3s ease-out;
-            transform: translateY(-100%);
-            opacity: 0;
-        }
-        
-        .mobile-menu.open {
-            transform: translateY(0);
-            opacity: 1;
-        }
-        
-        /* Navigation active state */
-        .nav-active {
-            color: var(--primary-color);
-            font-weight: 600;
-        }
-        
-        /* Project card styles */
-        .project-card {
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .project-image {
-            height: 200px;
-            background-size: cover;
-            background-position: center;
-            border-top-left-radius: 0.5rem;
-            border-top-right-radius: 0.5rem;
-        }
-        
-        /* Improved touch targets */
-        @media (max-width: 768px) {
-            .nav-link {
-                padding: 1rem;
-                font-size: 1.1rem;
-            }
-            
-            .btn-mobile {
-                min-height: 44px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-            
-            .project-image {
-                height: 160px;
-            }
-        }
-        
-        /* Section padding with offset for fixed header */
-        section {
-            scroll-margin-top: 5rem;
-        }
-    </style>
+    <title>Samuel Wilberforce - Cloud Solutions Architect</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Your Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+<!-- Backup CDN version -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/samuel-cell-debug/Portfolio@main/assets/css/style.css">
 </head>
-<body class="font-montserrat">
+<body>
     <!-- Navigation -->
-    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <div class="flex-shrink-0">
-                    <h1 class="text-xl font-bold text-indigo">Samuel Wilberforce</h1>
-                </div>
-                <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-4">
-                        <a href="#home" class="text-gray-700 hover:text-terracotta px-3 py-2 rounded-md text-sm font-medium transition-colors nav-link" data-section="home">Home</a>
-                        <a href="#about" class="text-gray-700 hover:text-terracotta px-3 py-2 rounded-md text-sm font-medium transition-colors nav-link" data-section="about">About</a>
-                        <a href="#skills" class="text-gray-700 hover:text-terracotta px-3 py-2 rounded-md text-sm font-medium transition-colors nav-link" data-section="skills">Skills</a>
-                        <a href="#projects" class="text-gray-700 hover:text-terracotta px-3 py-2 rounded-md text-sm font-medium transition-colors nav-link" data-section="projects">Projects</a>
-                        <a href="#podcast" class="text-gray-700 hover:text-terracotta px-3 py-2 rounded-md text-sm font-medium transition-colors nav-link" data-section="podcast">Podcast</a>
-                        <a href="#contact" class="text-gray-700 hover:text-terracotta px-3 py-2 rounded-md text-sm font-medium transition-colors nav-link" data-section="contact">Contact</a>
-                    </div>
-                </div>
-                <div class="md:hidden">
-                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-terracotta btn-mobile">
-                        <i class="fas fa-bars text-xl"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-        <!-- Mobile menu -->
-        <div id="mobile-menu" class="mobile-menu md:hidden hidden bg-white border-t absolute w-full">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="#home" class="block text-gray-700 hover:text-terracotta px-3 py-2 rounded-md text-base font-medium nav-link" data-section="home">Home</a>
-                <a href="#about" class="block text-gray-700 hover:text-terracotta px-3 py-2 rounded-md text-base font-medium nav-link" data-section="about">About</a>
-                <a href="#skills" class="block text-gray-700 hover:text-terracotta px-3 py-2 rounded-md text-base font-medium nav-link" data-section="skills">Skills</a>
-                <a href="#projects" class="block text-gray-700 hover:text-terracotta px-3 py-2 rounded-md text-base font-medium nav-link" data-section="projects">Projects</a>
-                <a href="#podcast" class="block text-gray-700 hover:text-terracotta px-3 py-2 rounded-md text-base font-medium nav-link" data-section="podcast">Podcast</a>
-                <a href="#contact" class="block text-gray-700 hover:text-terracotta px-3 py-2 rounded-md text-base font-medium nav-link" data-section="contact">Contact</a>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="#">Samuel Wilberforce</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero-bg min-h-screen flex items-center justify-center text-white pt-16">
-        <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-            <div class="fade-in">
-                <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-                    Civic Tech.<br>
-                    Sustainability.<br>
-                    <span class="text-gold">Community Impact.</span>
-                </h1>
-                <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed">
-                    Samuel Wilberforce is a civic tech founder and sustainability strategist, building platforms and campaigns that center everyday Ghanaian life.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="#projects" class="bg-gold text-indigo px-8 py-3 rounded-full font-semibold hover:bg-yellow-400 transition-colors btn-mobile">
-                        View Projects
-                    </a>
-                    <a href="https://drive.google.com/file/d/1LnW4KmVTyC33FEtWtDkQuf50S4hkZV8k/view?usp=sharing" target="_blank" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-indigo transition-colors btn-mobile">
-                        Download CV
-                    </a>
-                    <a href="#podcast" class="border-2 border-gold text-gold px-8 py-3 rounded-full font-semibold hover:bg-gold hover:text-indigo transition-colors btn-mobile">
-                        Listen to Podcast
-                    </a>
+    <div class="jumbotron jumbotron-fluid custom-jumbotron">
+        <div class="container text-center">
+            <h1 class="display-4">Samuel Wilberforce</h1>
+            <p class="lead">Cloud Solutions Architect | Building the Foundation for Smarter Cities in Ghana</p>
+            <hr class="my-4">
+            <p>This is where my passion for technology meets my mission for urban development.</p>
+            <!-- Elevator Pitch Video Placeholder -->
+            <div class="mt-4 embed-responsive embed-responsive-16by9 video-placeholder">
+                <div class="alert alert-info text-center">
+                    <i class="fas fa-video fa-2x mb-2"></i>
+                    <p class="mb-0">My elevator pitch video is coming soon!<br>Currently in production.</p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
     <!-- About Section -->
-    <section id="about" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div class="fade-in">
-                    <div class="w-64 h-64 mx-auto lg:mx-0 rounded-full overflow-hidden border-4 border-terracotta shadow-lg">
-                        <img src="https://drive.google.com/thumbnail?id=1KUXOYyhHiYALFqk438Lza00eAM_vkn-j&sz=w400" alt="Samuel Wilberforce" class="w-full h-full object-cover">
-                    </div>
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">About Me</h2>
                 </div>
-                <div class="fade-in">
-                    <h2 class="text-3xl md:text-4xl font-bold text-indigo mb-6">About Samuel</h2>
-                    <p class="text-lg mb-6 leading-relaxed">
-                        Samuel Wilberforce is a driver at a leading pharmaceutical company, the founder of HomeTrack GH, and a certified Virtual Assistant. He is also an ALX AWS/AiCE scholar, passionate about building scalable, inclusive civic tech solutions for housing and emergency response in Ghana.
-                    </p>
-                    <div class="bg-sand p-6 rounded-lg mb-6">
-                        <h3 class="text-xl font-semibold text-terracotta mb-3">Elevator Pitch</h3>
-                        <p class="text-lg italic">
-                            "I build civic technology and sustainability initiatives that amplify community voices, promote housing justice, and create pathways for inclusive development in Ghana."
-                        </p>
-                    </div>
-                    <div class="flex flex-wrap gap-3">
-                        <span class="bg-terracotta text-white px-4 py-2 rounded-full text-sm">🏠 Housing Justice Advocate</span>
-                        <span class="bg-olive text-white px-4 py-2 rounded-full text-sm">♻️ Sustainability Strategist</span>
-                        <span class="bg-indigo text-white px-4 py-2 rounded-full text-sm">💻 Civic Tech Founder</span>
-                        <span class="bg-gold text-indigo px-4 py-2 rounded-full text-sm">🎙️ Podcast Host</span>
-                        <span class="bg-blue-500 text-white px-4 py-2 rounded-full text-sm">🚚 Professional Driver</span>
-                    </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 text-center">
+                    <img src="assets/img/profile.jpg" alt="Samuel Wilberforce" class="profile-img img-fluid rounded-circle mb-4">
+                </div>
+                <div class="col-lg-8">
+                    <p class="lead">Hello! I am Samuel Wilberforce, an AWS Cloud Computing specialist with a passion for leveraging technology to tackle one of the most pressing challenges in my community: <strong>urbanization and sustainable housing in Ghana.</strong></p>
+                    <p>My journey into the cloud is driven by a firsthand understanding of the rapid growth of Ghanaian cities and the critical need for innovative, scalable solutions. I believe that the power of AWS—its ability to process vast datasets, support IoT systems, and host scalable platforms—is the key to revolutionizing how we approach affordable housing and urban planning.</p>
+                    <p>My goal is to become a <strong>Cloud Solutions Architect</strong> who builds secure, cost-effective, and resilient cloud infrastructures. I want to empower developers, urban planners, and NGOs to create solutions that significantly improve living conditions and foster economic development.</p>
+                    <p>When I'm not architecting cloud solutions, I'm working as a <em>passionate part-time amateur architect</em>, researching how traditional Ghanaian design can meet modern, sustainable building techniques.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Skills & Certifications -->
-    <section id="skills" class="py-20 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16 fade-in">
-                <h2 class="text-3xl md:text-4xl font-bold text-indigo mb-4">Skills & Certifications</h2>
-                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-                    A unique blend of civic technology, sustainability strategy, and community engagement expertise.
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cors-4 gap-8 mb-16">
-                <div class="fade-in bg-white p-6 rounded-lg shadow-lg card-hover">
-                    <div class="text-terracotta text-3xl mb-4">
-                        <i class="fas fa-laptop-code"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3 text-indigo">Civic Technology</h3>
-                    <div class="space-y-2">
-                        <span class="skill-badge">Platform Development</span>
-                        <span class="skill-badge">Community Engagement</span>
-                        <span class="skill-badge">User Research</span>
-                        <span class="skill-badge">Digital Advocacy</span>
-                    </div>
-                </div>
-
-                <div class="fade-in bg-white p-6 rounded-lg shadow-lg card-hover">
-                    <div class="text-olive text-3xl mb-4">
-                        <i class="fas fa-recycle"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3 text-indigo">Sustainability Strategy</h3>
-                    <div class="space-y-2">
-                        <span class="skill-badge">Circular Economy</span>
-                        <span class="skill-badge">Green Building</span>
-                        <span class="skill-badge">Campaign Design</span>
-                        <span class="skill-badge">Impact Measurement</span>
-                    </div>
-                </div>
-
-                <div class="fade-in bg-white p-6 rounded-lg shadow-lg card-hover">
-                    <div class="text-indigo text-3xl mb-4">
-                        <i class="fas fa-cloud"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3 text-indigo">Cloud & Tech</h3>
-                    <div class="space-y-2">
-                        <span class="skill-badge">AWS Cloud</span>
-                        <span class="skill-badge">Salesforce</span>
-                        <span class="skill-badge">MuleSoft</span>
-                        <span class="skill-badge">System Integration</span>
-                    </div>
-                </div>
-
-                <div class="fade-in bg-white p-6 rounded-lg shadow-lg card-hover">
-                    <div class="text-gold text-3xl mb-4">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3 text-indigo">Community Leadership</h3>
-                    <div class="space-y-2">
-                        <span class="skill-badge">PTA Leadership</span>
-                        <span class="skill-badge">Podcast Hosting</span>
-                        <span class="skill-badge">Public Speaking</span>
-                        <span class="skill-badge">Stakeholder Engagement</span>
-                    </div>
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">My Portfolio</h2>
                 </div>
             </div>
+            <div class="row">
+                <!-- Urban Growth Analysis Project -->
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <img src="https://via.placeholder.com/300x200/0052CC/ffffff?text=AWS+Urban+Analysis" class="card-img-top" alt="AWS Urban Analysis Project">
+                        <div class="card-body">
+                            <h5 class="card-title">Urban Growth Analysis with AWS QuickSight</h5>
+                            <p class="card-text">A conceptual data analysis project using AWS QuickSight to visualize and model urban growth patterns in Accra, Ghana. This project demonstrates how cloud-based analytics can inform smarter housing policy and infrastructure planning by predicting future urban sprawl and identifying areas in critical need of development.</p>
+                            <div class="mt-3">
+                                <span class="badge badge-primary">AWS QuickSight</span>
+                                <span class="badge badge-secondary">Data Analytics</span>
+                                <span class="badge badge-info">Urban Planning</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#" class="btn btn-outline-primary btn-sm">View Project Details</a>
+                        </div>
+                    </div>
+                </div>
 
-            <!-- Certifications Timeline -->
-            <div class="fade-in bg-white p-8 rounded-lg shadow-lg">
-                <h3 class="text-2xl font-bold text-indigo mb-8 text-center">Certifications & Education Timeline</h3>
-                <div class="max-w-3xl mx-auto">
-                    <div class="timeline-item">
-                        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between">
-                            <div>
-                                <h4 class="font-semibold text-lg">Bachelor of Arts in English Language</h4>
-                                <p class="text-gray-600">University of Ghana • 2019-2023</p>
+                <!-- Cloud Architecture Project -->
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <img src="https://via.placeholder.com/300x200/CC5500/ffffff?text=Cloud+Architecture" class="card-img-top" alt="Cloud Architecture Project">
+                        <div class="card-body">
+                            <h5 class="card-title">Cloud Infrastructure Design</h5>
+                            <p class="card-text">Designing scalable and secure cloud infrastructure solutions using AWS services including EC2, S3, RDS, and Lambda functions for optimal performance and cost-efficiency.</p>
+                            <div class="mt-3">
+                                <span class="badge badge-primary">AWS</span>
+                                <span class="badge badge-secondary">CloudFormation</span>
+                                <span class="badge badge-info">Infrastructure</span>
                             </div>
-                            <span class="bg-terracotta text-white px-3 py-1 rounded-full text-sm mt-2 sm:mt-0">Completed</span>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#" class="btn btn-outline-primary btn-sm">View Project Details</a>
                         </div>
                     </div>
-                    <div class="timeline-item">
-                        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between">
-                            <div>
-                                <h4 class="font-semibold text-lg">ALX Virtual Assistant Program</h4>
-                                <p class="text-gray-600">ALX Africa • 2025</p>
+                </div>
+
+                <!-- IoT Solutions Project -->
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <img src="https://via.placeholder.com/300x200/00CC52/ffffff?text=IOT+Solutions" class="card-img-top" alt="IOT Solutions Project">
+                        <div class="card-body">
+                            <h5 class="card-title">Smart City IoT Solutions</h5>
+                            <p class="card-text">Developing IoT-based solutions for smart city applications, including sensor networks for environmental monitoring and infrastructure management using AWS IoT Core.</p>
+                            <div class="mt-3">
+                                <span class="badge badge-primary">AWS IoT</span>
+                                <span class="badge badge-secondary">Sensor Networks</span>
+                                <span class="badge badge-info">Smart Cities</span>
                             </div>
-                            <span class="bg-olive text-white px-3 py-1 rounded-full text-sm mt-2 sm:mt-0">Certified</span>
                         </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between">
-                            <div>
-                                <h4 class="font-semibold text-lg">AWS Cloud Practitioner</h4>
-                                <p class="text-gray-600">Amazon Web Services • 2025</p>
-                            </div>
-                            <span class="bg-indigo text-white px-3 py-1 rounded-full text-sm mt-2 sm:mt-0">In Progress</span>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between">
-                            <div>
-                                <h4 class="font-semibold text-lg">Salesforce Administrator</h4>
-                                <p class="text-gray-600">Salesforce • 2025</p>
-                            </div>
-                            <span class="bg-gold text-indigo px-3 py-1 rounded-full text-sm mt-2 sm:mt-0">In Progress</span>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between">
-                            <div>
-                                <h4 class="font-semibold text-lg">MuleSoft Developer I</h4>
-                                <p class="text-gray-600">MuleSoft • 2025</p>
-                            </div>
-                            <span class="bg-terracotta text-white px-3 py-1 rounded-full text-sm mt-2 sm:mt-0">In Progress</span>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between">
-                            <div>
-                                <h4 class="font-semibold text-lg">AiCE Scholar Program</h4>
-                                <p class="text-gray-600">AI Center of Excellence • 2025</p>
-                            </div>
-                            <span class="bg-olive text-white px-3 py-1 rounded-full text-sm mt-2 sm:mt-0">Active</span>
+                        <div class="card-footer">
+                            <a href="#" class="btn btn-outline-primary btn-sm">View Project Details</a>
                         </div>
                     </div>
                 </div>
@@ -395,202 +159,52 @@
         </div>
     </section>
 
-    <!-- Impact Projects -->
-    <section id="projects" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16 fade-in">
-                <h2 class="text-3xl md:text-4xl font-bold text-indigo mb-4">Impact Projects</h2>
-                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-                    Building civic technology and sustainability initiatives that center everyday Ghanaian life.
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- HomeTrack GH -->
-                <div class="fade-in project-card bg-white rounded-lg shadow-lg card-hover">
-                    <div class="project-image" style="background-image: url('https://drive.google.com/thumbnail?id=1KUXOYyhHiYALFqk438Lza00eAM_vkn-j&sz=w600')"></div>
-                    <div class="p-6 flex-grow">
-                        <h3 class="text-2xl font-bold mb-4 text-indigo">HomeTrack GH</h3>
-                        <p class="mb-4 leading-relaxed">
-                            HomeTrack is a mobile-first platform designed to help underserved Ghanaians access affordable housing through credit-building tools, housing goal planning, and voucher-based financing.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-terracotta text-white px-3 py-1 rounded-full text-sm">Housing Justice</span>
-                            <span class="bg-terracotta text-white px-3 py-1 rounded-full text-sm">Community Platform</span>
-                            <span class="bg-terracotta text-white px-3 py-1 rounded-full text-sm">React</span>
-                            <span class="bg-terracotta text-white px-3 py-1 rounded-full text-sm">Node.js</span>
-                        </div>
-                    </div>
-                    <div class="px-6 pb-6">
-                        <div class="flex justify-between items-center">
-                            <a href="https://samuel-cell-debug.github.io/HomeTrack-GH/" target="_blank" class="inline-flex items-center text-indigo hover:text-purple-700 font-semibold">
-                                View Project <i class="fas fa-external-link-alt ml-2"></i>
-                            </a>
-                            <a href="https://github.com/Samuel-cell-debug/HomeTrack-GH" target="_blank" class="inline-flex items-center text-gray-600 hover:text-gray-800 text-sm">
-                                <i class="fab fa-github mr-1"></i> Code
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Nkwalink Emergency Response Platform -->
-                <div class="fade-in project-card bg-white rounded-lg shadow-lg card-hover">
-                    <div class="project-image" style="background-image: url('https://drive.google.com/thumbnail?id=1HsEGBbEUjsQKVSeVUZenTZpw48O_HcEG&sz=w600')"></div>
-                    <div class="p-6 flex-grow">
-                        <h3 class="text-2xl font-bold mb-4 text-indigo">Nkwalink Emergency Response Platform</h3>
-                        <p class="mb-4 leading-relaxed">
-                            A comprehensive emergency response platform designed for Ghana, enabling citizens to report emergencies and emergency responders to coordinate response efforts efficiently.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-indigo text-white px-3 py-1 rounded-full text-sm">Emergency Response</span>
-                            <span class="bg-indigo text-white px-3 py-1 rounded-full text-sm">Public Safety</span>
-                            <span class="bg-indigo text-white px-3 py-1 rounded-full text-sm">JavaScript</span>
-                            <span class="bg-indigo text-white px-3 py-1 rounded-full text-sm">Firebase</span>
-                        </div>
-                    </div>
-                    <div class="px-6 pb-6">
-                        <div class="flex justify-between items-center">
-                            <a href="https://samuel-cell-debug.github.io/Nkwa-Link/" target="_blank" class="inline-flex items-center text-indigo hover:text-purple-700 font-semibold">
-                                View Project <i class="fas fa-external-link-alt ml-2"></i>
-                            </a>
-                            <a href="https://github.com/Samuel-cell-debug/Nkwa-Link" target="_blank" class="inline-flex items-center text-gray-600 hover:text-gray-800 text-sm">
-                                <i class="fab fa-github mr-1"></i> Code
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- SmartWaterGhana -->
-                <div class="fade-in project-card bg-white rounded-lg shadow-lg card-hover">
-                    <div class="project-image" style="background-image: url('https://drive.google.com/thumbnail?id=1B8a2I52rsMAwskSEt4QWmvAq4CSz6gWt&sz=w600')"></div>
-                    <div class="p-6 flex-grow">
-                        <h3 class="text-2xl font-bold mb-4 text-indigo">SmartWaterGhana</h3>
-                        <p class="mb-4 leading-relaxed">
-                            A pilot dashboard for smart water management in Ghanaian households, empowering communities with tech-enabled water solutions that are affordable, scalable, and dignified.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-blue-500 text-white px-3 py-1 rounded-full text-sm">Water Management</span>
-                            <span class="bg-blue-500 text-white px-3 py-1 rounded-full text-sm">Sustainability</span>
-                            <span class="bg-blue-500 text-white px-3 py-1 rounded-full text-sm">IoT</span>
-                            <span class="bg-blue-500 text-white px-3 py-1 rounded-full text-sm">Dashboard</span>
-                        </div>
-                    </div>
-                    <div class="px-6 pb-6">
-                        <div class="flex justify-between items-center">
-                            <a href="https://samuel-cell-debug.github.io/smartwater-pilot/" target="_blank" class="inline-flex items-center text-indigo hover:text-purple-700 font-semibold">
-                                View Project <i class="fas fa-external-link-alt ml-2"></i>
-                            </a>
-                            <a href="https://github.com/Samuel-cell-debug/smartwater-pilot" target="_blank" class="inline-flex items-center text-gray-600 hover:text-gray-800 text-sm">
-                                <i class="fab fa-github mr-1"></i> Code
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Ghana Bank Validation Demo -->
-                <div class="fade-in project-card bg-white rounded-lg shadow-lg card-hover">
-                    <div class="project-image" style="background-image: url('https://drive.google.com/thumbnail?id=1mn2hFfJcED0jdQ2RQ2xJA9r_oMD63Swt&sz=w600')"></div>
-                    <div class="p-6 flex-grow">
-                        <h3 class="text-2xl font-bold mb-4 text-indigo">Ghana Bank Validation Demo</h3>
-                        <p class="mb-4 leading-relaxed">
-                            This smart bank transfer form dynamically validates account numbers based on the selected bank. It reflects real-world formats used by licensed Ghanaian banks.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-green-600 text-white px-3 py-1 rounded-full text-sm">Financial Tech</span>
-                            <span class="bg-green-600 text-white px-3 py-1 rounded-full text-sm">Validation</span>
-                            <span class="bg-green-600 text-white px-3 py-1 rounded-full text-sm">JavaScript</span>
-                            <span class="bg-green-600 text-white px-3 py-1 rounded-full text-sm">UI/UX</span>
-                        </div>
-                    </div>
-                    <div class="px-6 pb-6">
-                        <div class="flex justify-between items-center">
-                            <a href="https://samuel-cell-debug.github.io/ghana-bank-validation-demo/" target="_blank" class="inline-flex items-center text-indigo hover:text-purple-700 font-semibold">
-                                View Project <i class="fas fa-external-link-alt ml-2"></i>
-                            </a>
-                            <a href="https://github.com/Samuel-cell-debug/ghana-bank-validation-demo" target="_blank" class="inline-flex items-center text-gray-600 hover:text-gray-800 text-sm">
-                                <i class="fab fa-github mr-1"></i> Code
-                            </a>
-                        </div>
-                    </div>
+    <!-- Skills Section -->
+    <section id="skills" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">My Skills</h2>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Podcast Section -->
-    <section id="podcast" class="py-20 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16 fade-in">
-                <h2 class="text-3xl md:text-4xl font-bold text-indigo mb-4">Podcast</h2>
-                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-                    Exploring civic technology, sustainability, and community-driven development in Ghana.
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="fade-in bg-white p-8 rounded-lg shadow-lg card-hover">
-                    <div class="text-4xl text-terracotta mb-4">
-                        <i class="fas fa-podcast"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold text-indigo mb-4">The Civic Tech Podcast</h3>
-                    <p class="mb-6 leading-relaxed">
-                        A podcast exploring how technology can be leveraged to solve community challenges, promote civic engagement, and drive sustainable development in Ghana and across Africa.
-                    </p>
-                    <div class="flex flex-wrap gap-2 mb-6">
-                        <span class="bg-terracotta text-white px-3 py-1 rounded-full text-sm">Civic Technology</span>
-                        <span class="bg-olive text-white px-3 py-1 rounded-full text-sm">Community Engagement</span>
-                        <span class="bg-indigo text-white px-3 py-1 rounded-full text-sm">Sustainable Development</span>
-                    </div>
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="#" class="bg-terracotta text-white px-6 py-3 rounded-full font-semibold hover:bg-orange-700 transition-colors text-center btn-mobile">
-                            <i class="fas fa-play-circle mr-2"></i> Listen Now
-                        </a>
-                        <a href="#" class="border-2 border-terracotta text-terracotta px-6 py-3 rounded-full font-semibold hover:bg-terracotta hover:text-white transition-colors text-center btn-mobile">
-                            <i class="fas fa-rss mr-2"></i> Subscribe
-                        </a>
-                    </div>
-                </div>
-
-                <div class="fade-in">
-                    <div class="bg-white p-6 rounded-lg shadow-lg mb-6 card-hover">
-                        <h4 class="text-xl font-semibold text-indigo mb-3">Latest Episodes</h4>
-                        <div class="space-y-4">
-                            <div class="border-l-4 border-terracotta pl-4">
-                                <h5 class="font-medium">Episode 12: Housing Justice in Ghana</h5>
-                                <p class="text-sm text-gray-600">Exploring innovative approaches to affordable housing in urban Ghana.</p>
-                            </div>
-                            <div class="border-l-4 border-olive pl-4">
-                                <h5 class="font-medium">Episode 11: Civic Tech for Emergency Response</h5>
-                                <p class="text-sm text-gray-600">How technology can transform emergency services in West Africa.</p>
-                            </div>
-                            <div class="border-l-4 border-indigo pl-4">
-                                <h5 class="font-medium">Episode 10: Water Sustainability Solutions</h5>
-                                <p class="text-sm text-gray-600">Tech-enabled approaches to water management in Ghanaian communities.</p>
-                            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="skill-item">
+                        <h5>AWS Cloud Services</h5>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                     </div>
-
-                    <div class="bg-white p-6 rounded-lg shadow-lg card-hover">
-                        <h4 class="text-xl font-semibold text-indigo mb-3">Available On</h4>
-                        <div class="grid grid-cols-3 gap-4">
-                            <a href="#" class="flex justify-center items-center bg-gray-100 hover:bg-gray-200 p-3 rounded-lg transition-colors btn-mobile">
-                                <i class="fab fa-spotify text-2xl text-green-500"></i>
-                            </a>
-                            <a href="#" class="flex justify-center items-center bg-gray-100 hover:bg-gray-200 p-3 rounded-lg transition-colors btn-mobile">
-                                <i class="fab fa-apple text-2xl text-gray-800"></i>
-                            </a>
-                            <a href="#" class="flex justify-center items-center bg-gray-100 hover:bg-gray-200 p-3 rounded-lg transition-colors btn-mobile">
-                                <i class="fab fa-google text-2xl text-blue-500"></i>
-                            </a>
-                            <a href="#" class="flex justify-center items-center bg-gray-100 hover:bg-gray-200 p-3 rounded-lg transition-colors btn-mobile">
-                                <i class="fas fa-podcast text-2xl text-purple-500"></i>
-                            </a>
-                            <a href="#" class="flex justify-center items-center bg-gray-100 hover:bg-gray-200 p-3 rounded-lg transition-colors btn-mobile">
-                                <i class="fab fa-youtube text-2xl text-red-500"></i>
-                            </a>
-                            <a href="#" class="flex justify-center items-center bg-gray-100 hover:bg-gray-200 p-3 rounded-lg transition-colors btn-mobile">
-                                <i class="fab fa-soundcloud text-2xl text-orange-500"></i>
-                            </a>
+                    <div class="skill-item">
+                        <h5>Cloud Architecture</h5>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <h5>Data Analytics</h5>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="skill-item">
+                        <h5>Infrastructure as Code</h5>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <h5>DevOps Practices</h5>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <h5>Solution Design</h5>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                     </div>
                 </div>
@@ -599,210 +213,65 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-indigo text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16 fade-in">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Let's Connect</h2>
-                <p class="text-lg max-w-2xl mx-auto">
-                    Based in Accra, Ghana. Available for consulting, speaking engagements, and collaborative projects across West Africa and globally.
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                <div class="fade-in">
-                    <h3 class="text-2xl font-bold mb-6">Get in Touch</h3>
-                    <div class="space-y-6">
-                        <div class="flex items-start">
-                            <div class="text-gold text-xl mr-4 mt-1">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold mb-1">Email</h4>
-                                <a href="mailto:successrichman@gmail.com" class="hover:text-gold transition-colors">successrichman@gmail.com</a>
-                            </div>
-                        </div>
-                        <div class="flex items-start">
-                            <div class="text-gold text-xl mr-4 mt-1">
-                                <i class="fab fa-whatsapp"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold mb-1">WhatsApp</h4>
-                                <a href="https://wa.me/233599723434" target="_blank" class="hover:text-gold transition-colors">+233 599 723 434</a>
-                            </div>
-                        </div>
-                        <div class="flex items-start">
-                            <div class="text-gold text-xl mr-4 mt-1">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold mb-1">Location</h4>
-                                <p>Accra, Ghana</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mt-10">
-                        <h4 class="text-xl font-semibold mb-4">Follow Me</h4>
-                        <div class="flex space-x-4">
-                            <a href="https://github.com/Samuel-cell-debug" target="_blank" class="bg-white bg-opacity-10 hover:bg-opacity-20 w-12 h-12 rounded-full flex items-center justify-center transition-colors">
-                                <i class="fab fa-github text-xl"></i>
-                            </a>
-                            <a href="https://www.linkedin.com/in/samuel-wilberforce/" target="_blank" class="bg-white bg-opacity-10 hover:bg-opacity-20 w-12 h-12 rounded-full flex items-center justify-center transition-colors">
-                                <i class="fab fa-linkedin-in text-xl"></i>
-                            </a>
-                            <a href="#" class="bg-white bg-opacity-10 hover:bg-opacity-20 w-12 h-12 rounded-full flex items-center justify-center transition-colors">
-                                <i class="fab fa-twitter text-xl"></i>
-                            </a>
-                            <a href="#" class="bg-white bg-opacity-10 hover:bg-opacity-20 w-12 h-12 rounded-full flex items-center justify-center transition-colors">
-                                <i class="fab fa-instagram text-xl"></i>
-                            </a>
-                        </div>
-                    </div>
+    <section id="contact" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Get In Touch</h2>
                 </div>
-
-                <div class="fade-in">
-                    <h3 class="text-2xl font-bold mb-6">Send a Message</h3>
-                    <form class="space-y-6">
-                        <div>
-                            <label for="name" class="block mb-2 font-medium">Name</label>
-                            <input type="text" id="name" class="w-full bg-indigo-700 border border-indigo-500 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent" placeholder="Your name">
+            </div>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Your Name">
                         </div>
-                        <div>
-                            <label for="email" class="block mb-2 font-medium">Email</label>
-                            <input type="email" id="email" class="w-full bg-indigo-700 border border-indigo-500 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent" placeholder="Your email address">
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Your Email">
                         </div>
-                        <div>
-                            <label for="message" class="block mb-2 font-medium">Message</label>
-                            <textarea id="message" rows="5" class="w-full bg-indigo-700 border border-indigo-500 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent" placeholder="Your message"></textarea>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea class="form-control" id="message" rows="5" placeholder="Your Message"></textarea>
                         </div>
-                        <button type="submit" class="bg-gold text-indigo px-6 py-3 rounded-lg font-semibold hover:bg-yellow-400 transition-colors w-full">
-                            Send Message
-                        </button>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
                     </form>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-lg-12 text-center">
+                    <h4>Connect with me</h4>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/samuel-wilberforce/" target="_blank" title="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/samuel-cell-debug" target="_blank" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="mailto:your-email@example.com" title="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center">
-                <h3 class="text-2xl font-bold mb-4">Let's build technology that serves communities.</h3>
-                <p class="text-lg mb-6">Samuel Wilberforce - Civic Tech Founder & Sustainability Strategist</p>
-                <p class="text-gray-400">© 2024 Samuel Wilberforce. Building technology for dignity and resilience.</p>
-            </div>
+    <footer class="text-center py-3">
+        <div class="container">
+            <p>&copy; 2024 Samuel Wilberforce. All rights reserved.</p>
+            <p>Cloud Solutions Architect | Building the Future of Urban Ghana</p>
         </div>
     </footer>
 
-    <script>
-        // Mobile menu toggle
-        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
-            const mobileMenu = document.getElementById('mobile-menu');
-            mobileMenu.classList.toggle('hidden');
-            mobileMenu.classList.toggle('open');
-        });
-
-        // Close mobile menu when clicking on a link
-        document.querySelectorAll('#mobile-menu a').forEach(link => {
-            link.addEventListener('click', function() {
-                document.getElementById('mobile-menu').classList.add('hidden');
-                document.getElementById('mobile-menu').classList.remove('open');
-            });
-        });
-
-        // Fade in animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    
-                    // Update navigation active state
-                    const sectionId = entry.target.getAttribute('id');
-                    document.querySelectorAll('.nav-link').forEach(link => {
-                        if (link.getAttribute('data-section') === sectionId) {
-                            link.classList.add('nav-active');
-                        } else {
-                            link.classList.remove('nav-active');
-                        }
-                    });
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.fade-in').forEach(el => {
-            observer.observe(el);
-        });
-
-        // Smooth scrolling for navigation links with offset for fixed header
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    // Close mobile menu if open
-                    if (window.innerWidth < 768) {
-                        document.getElementById('mobile-menu').classList.add('hidden');
-                        document.getElementById('mobile-menu').classList.remove('open');
-                    }
-                    
-                    const headerOffset = 80;
-                    const elementPosition = targetElement.getBoundingClientRect().top;
-                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-                    window.scrollTo({
-                        top: offsetPosition,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-
-        // Form submission
-        const contactForm = document.querySelector('form');
-        if (contactForm) {
-            contactForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                const name = document.getElementById('name').value;
-                alert(`Thank you ${name}! Your message has been sent. I'll get back to you soon.`);
-                this.reset();
-            });
-        }
-
-        // Initialize navigation active state
-        function setActiveNav() {
-            const sections = document.querySelectorAll('section');
-            const navLinks = document.querySelectorAll('.nav-link');
-            
-            let currentSection = '';
-            
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                
-                if (window.scrollY >= (sectionTop - 100)) {
-                    currentSection = section.getAttribute('id');
-                }
-            });
-            
-            navLinks.forEach(link => {
-                link.classList.remove('nav-active');
-                if (link.getAttribute('data-section') === currentSection) {
-                    link.classList.add('nav-active');
-                }
-            });
-        }
-
-        window.addEventListener('scroll', setActiveNav);
-        window.addEventListener('load', setActiveNav);
-    </script>
+    <!-- Bootstrap & jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Your Custom JS -->
+<script src="assets/js/script.js"></script>
+<!-- Backup CDN version -->
+<script src="https://cdn.jsdelivr.net/gh/samuel-cell-debug/Portfolio@main/assets/js/script.js"></script>
 </body>
 </html>

@@ -1,5 +1,6 @@
 // Smooth scrolling for navigation links
 $(document).ready(function() {
+    // Smooth scrolling
     $('a.nav-link').on('click', function(event) {
         if (this.hash !== "") {
             event.preventDefault();
@@ -11,7 +12,7 @@ $(document).ready(function() {
     });
 
     // Animate progress bars when they come into view
-    $(window).scroll(function() {
+    function animateProgressBars() {
         $('.progress-bar').each(function() {
             var position = $(this).offset().top;
             var scroll = $(window).scrollTop() + $(window).height();
@@ -19,7 +20,11 @@ $(document).ready(function() {
                 $(this).css('width', $(this).attr('aria-valuenow') + '%');
             }
         });
-    });
+    }
+
+    // Animate on scroll and on load
+    $(window).scroll(animateProgressBars);
+    animateProgressBars(); // Animate on page load
 
     // Simple form validation
     $('form').on('submit', function(e) {
