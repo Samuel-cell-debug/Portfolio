@@ -1,43 +1,58 @@
-// Smooth scrolling for navigation links
-$(document).ready(function() {
-    // Smooth scrolling
-    $('a.nav-link').on('click', function(event) {
-        if (this.hash !== "") {
-            event.preventDefault();
-            var hash = this.hash;
-            $('html, body').animate({
-                scrollTop: $(hash).offset().top - 70
-            }, 800);
-        }
+console.log('✅ Custom JavaScript is loading!');
+console.log('✅ jQuery available:', typeof jQuery !== 'undefined');
+console.log('✅ Number of nav links:', document.querySelectorAll('a.nav-link').length);// Vanilla JavaScript smooth scrolling (works without jQuery)
+document.addEventListener('DOMContentLoaded', function() {
+    // Add smooth scrolling to all navigation links
+    document.querySelectorAll('a.nav-link').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href');
+            if (targetId.startsWith('#')) {
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 70,
+                        behavior: 'smooth'
+                    });
+                }
+            }
+        });
     });
 
-    // Animate progress bars when they come into view
+    // Progress bar animation
     function animateProgressBars() {
-        $('.progress-bar').each(function() {
-            var position = $(this).offset().top;
-            var scroll = $(window).scrollTop() + $(window).height();
-            if (position < scroll) {
-                $(this).css('width', $(this).attr('aria-valuenow') + '%');
+        document.querySelectorAll('.progress-bar').forEach(bar => {
+            const position = bar.getBoundingClientRect().top;
+            const screenPosition = window.innerHeight / 1.3;
+            
+            if (position < screenPosition) {
+                const width = bar.getAttribute('aria-valuenow') + '%';
+                bar.style.width = width;
             }
         });
     }
 
-    // Animate on scroll and on load
-    $(window).scroll(animateProgressBars);
-    animateProgressBars(); // Animate on page load
+    // Animate on scroll and load
+    window.addEventListener('scroll', animateProgressBars);
+    animateProgressBars();
 
-    // Simple form validation
-    $('form').on('submit', function(e) {
-        e.preventDefault();
-        var name = $('#name').val();
-        var email = $('#email').val();
-        var message = $('#message').val();
-        
-        if (name && email && message) {
-            alert('Thank you for your message, ' + name + '! I will get back to you soon.');
-            this.reset();
-        } else {
-            alert('Please fill in all fields before submitting.');
-        }
-    });
+    // Form validation
+    const form = document.querySelector('form');
+    if (form) {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            
+            if (name && email && message) {
+                alert('Thank you for your message, ' + name + '! I will get back to you soon.');
+                form.reset();
+            } else {
+                alert('Please fill in all fields before submitting.');
+            }
+        });
+    }
 });
