@@ -11,9 +11,6 @@
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -21,7 +18,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="#">Samuel Wilberforce</a>
+            <a class="navbar-brand fw-bold" href="#home">Samuel Wilberforce</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -29,6 +26,7 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#elevator-pitch">Elevator Pitch</a></li>
                     <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
                     <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
@@ -51,15 +49,19 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-4 text-center">
-                    <img src="https://via.placeholder.com/300x300/007bff/ffffff?text=Samuel" 
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face&fp-x=0.5&fp-y=0.5&fp-z=1&fp-debug=false" 
                          alt="Samuel Wilberforce" 
-                         class="img-fluid rounded-circle mb-4 shadow">
+                         class="img-fluid rounded-circle mb-4 shadow" style="width: 250px; height: 250px; object-fit: cover;">
                 </div>
                 <div class="col-lg-8">
-                    <h2 class="fw-bold">About Me</h2>
+                    <h2 class="fw-bold mb-4">About Me</h2>
                     <p class="lead">Hello! I am Samuel Wilberforce, an AWS Cloud Computing specialist with a passion for leveraging technology to tackle urban housing challenges in Ghana.</p>
-                    <p>My journey into cloud computing is driven by the rapid growth of Ghanaian cities and the critical need for innovative, scalable housing solutions.</p>
-                    <p>When I'm not architecting cloud solutions, I'm working as a passionate part-time amateur architect, researching sustainable building techniques.</p>
+                    <p>My journey into cloud computing is driven by the rapid growth of Ghanaian cities and the critical need for innovative, scalable housing solutions. I believe that AWS cloud technologies can revolutionize how we approach urban development.</p>
+                    <p>When I'm not architecting cloud solutions, I'm working as a passionate part-time amateur architect, researching how traditional Ghanaian design can meet modern, sustainable building techniques.</p>
+                    <div class="mt-4">
+                        <a href="#contact" class="btn btn-primary me-2">Get In Touch</a>
+                        <a href="#elevator-pitch" class="btn btn-outline-primary">Watch My Pitch</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -69,20 +71,28 @@
     <section id="elevator-pitch" class="py-5">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 text-center">
+                <div class="col-lg-12 text-center mb-5">
                     <h2 class="fw-bold">My Elevator Pitch</h2>
                     <p class="lead">30-second professional introduction</p>
                 </div>
             </div>
             <div class="row justify-content-center">
                 <div class="col-lg-8">
-                    <div class="video-container">
+                    <div class="video-container shadow-lg">
                         <iframe src="https://drive.google.com/file/d/13fMTOYU9eH2AFtB1HNX2Y6xHznJImKo3/preview" 
                                 width="100%" 
-                                height="400" 
+                                height="450" 
                                 allow="autoplay" 
-                                class="rounded shadow">
+                                style="border: none;"
+                                title="Samuel Wilberforce - Elevator Pitch">
                         </iframe>
+                    </div>
+                    <div class="text-center mt-3">
+                        <a href="https://drive.google.com/file/d/13fMTOYU9eH2AFtB1HNX2Y6xHznJImKo3/view" 
+                           target="_blank" 
+                           class="btn btn-outline-secondary">
+                           <i class="fas fa-external-link-alt"></i> Open Video in New Tab
+                        </a>
                     </div>
                 </div>
             </div>
@@ -96,31 +106,43 @@
             <div class="row">
                 <div class="col-md-4 mb-4">
                     <div class="card h-100 shadow">
-                        <img src="https://via.placeholder.com/300x200/007bff/ffffff?text=AWS+Project" class="card-img-top" alt="AWS Project">
-                        <div class="card-body">
-                            <h5 class="card-title">Urban Growth Analysis</h5>
-                            <p class="card-text">AWS-based analysis of urban development patterns in Ghana using cloud technologies.</p>
-                            <a href="#" class="btn btn-primary">View Project</a>
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=250&fit=crop" class="card-img-top" alt="Urban Analysis">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Urban Growth Analysis with AWS</h5>
+                            <p class="card-text flex-grow-1">Data analysis project using AWS QuickSight to visualize urban growth patterns in Accra, Ghana for smarter housing planning.</p>
+                            <div class="mt-auto">
+                                <span class="badge bg-primary me-1">AWS QuickSight</span>
+                                <span class="badge bg-secondary me-1">Data Analytics</span>
+                                <span class="badge bg-success">Urban Planning</span>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
                     <div class="card h-100 shadow">
-                        <img src="https://via.placeholder.com/300x200/28a745/ffffff?text=Cloud+Arch" class="card-img-top" alt="Cloud Architecture">
-                        <div class="card-body">
-                            <h5 class="card-title">Cloud Infrastructure</h5>
-                            <p class="card-text">Designing scalable cloud solutions for urban development challenges.</p>
-                            <a href="#" class="btn btn-primary">View Project</a>
+                        <img src="https://images.unsplash.com/photo-1627398242454-45a1465c2479?w=400&h=250&fit=crop" class="card-img-top" alt="Cloud Architecture">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Cloud Infrastructure Design</h5>
+                            <p class="card-text flex-grow-1">Designing scalable AWS cloud infrastructure for urban development applications using EC2, S3, and Lambda services.</p>
+                            <div class="mt-auto">
+                                <span class="badge bg-primary me-1">AWS EC2</span>
+                                <span class="badge bg-secondary me-1">CloudFormation</span>
+                                <span class="badge bg-success">Infrastructure</span>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
                     <div class="card h-100 shadow">
-                        <img src="https://via.placeholder.com/300x200/dc3545/ffffff?text=IOT+Solution" class="card-img-top" alt="IoT Solutions">
-                        <div class="card-body">
-                            <h5 class="card-title">Smart City IoT</h5>
-                            <p class="card-text">IoT solutions for smart city applications and urban monitoring.</p>
-                            <a href="#" class="btn btn-primary">View Project</a>
+                        <img src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400&h=250&fit=crop" class="card-img-top" alt="IoT Solutions">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Smart City IoT Solutions</h5>
+                            <p class="card-text flex-grow-1">IoT-based smart city solutions using AWS IoT Core for environmental monitoring and urban infrastructure management.</p>
+                            <div class="mt-auto">
+                                <span class="badge bg-primary me-1">AWS IoT</span>
+                                <span class="badge bg-secondary me-1">Sensor Networks</span>
+                                <span class="badge bg-success">Smart Cities</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -136,27 +158,39 @@
                 <div class="col-md-6">
                     <div class="skill-item mb-4">
                         <h5>AWS Cloud Services <span class="float-end">85%</span></h5>
-                        <div class="progress">
+                        <div class="progress" style="height: 8px;">
                             <div class="progress-bar" style="width: 85%"></div>
                         </div>
                     </div>
                     <div class="skill-item mb-4">
                         <h5>Cloud Architecture <span class="float-end">80%</span></h5>
-                        <div class="progress">
+                        <div class="progress" style="height: 8px;">
                             <div class="progress-bar" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item mb-4">
+                        <h5>Data Analytics <span class="float-end">75%</span></h5>
+                        <div class="progress" style="height: 8px;">
+                            <div class="progress-bar" style="width: 75%"></div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="skill-item mb-4">
-                        <h5>Data Analytics <span class="float-end">75%</span></h5>
-                        <div class="progress">
-                            <div class="progress-bar" style="width: 75%"></div>
+                        <h5>Infrastructure as Code <span class="float-end">70%</span></h5>
+                        <div class="progress" style="height: 8px;">
+                            <div class="progress-bar" style="width: 70%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item mb-4">
+                        <h5>DevOps Practices <span class="float-end">65%</span></h5>
+                        <div class="progress" style="height: 8px;">
+                            <div class="progress-bar" style="width: 65%"></div>
                         </div>
                     </div>
                     <div class="skill-item mb-4">
                         <h5>Solution Design <span class="float-end">85%</span></h5>
-                        <div class="progress">
+                        <div class="progress" style="height: 8px;">
                             <div class="progress-bar" style="width: 85%"></div>
                         </div>
                     </div>
@@ -171,20 +205,22 @@
             <h2 class="text-center fw-bold mb-5">Get In Touch</h2>
             <div class="row justify-content-center">
                 <div class="col-lg-8">
-                    <form>
-                        <div class="mb-3">
-                            <label class="form-label">Name</label>
-                            <input type="text" class="form-control" required>
+                    <form id="contactForm">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Name *</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Email *</label>
+                                <input type="email" class="form-control" required>
+                            </div>
                         </div>
                         <div class="mb-3">
-                            <label class="form-label">Email</label>
-                            <input type="email" class="form-control" required>
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label">Message</label>
+                            <label class="form-label">Message *</label>
                             <textarea class="form-control" rows="5" required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+                        <button type="submit" class="btn btn-primary btn-lg w-100">Send Message</button>
                     </form>
                 </div>
             </div>
@@ -195,10 +231,16 @@
     <footer class="bg-dark text-white py-4">
         <div class="container text-center">
             <p>&copy; 2024 Samuel Wilberforce. All rights reserved.</p>
-            <div class="social-links">
-                <a href="#" class="text-white mx-2"><i class="fab fa-linkedin fa-2x"></i></a>
-                <a href="#" class="text-white mx-2"><i class="fab fa-github fa-2x"></i></a>
-                <a href="#" class="text-white mx-2"><i class="fas fa-envelope fa-2x"></i></a>
+            <div class="social-links mt-3">
+                <a href="https://www.linkedin.com/in/samuel-wilberforce/" target="_blank" class="text-white mx-2">
+                    <i class="fab fa-linkedin fa-2x"></i>
+                </a>
+                <a href="https://github.com/samuel-cell-debug" target="_blank" class="text-white mx-2">
+                    <i class="fab fa-github fa-2x"></i>
+                </a>
+                <a href="mailto:your-email@example.com" class="text-white mx-2">
+                    <i class="fas fa-envelope fa-2x"></i>
+                </a>
             </div>
         </div>
     </footer>
