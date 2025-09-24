@@ -355,3 +355,19 @@ a, button, .nav-link { transition: all 0.2s ease; }
     color: var(--primary-blue);
     font-weight: bold;
 }
+
+/* Enhanced video container for larger displays */
+@media (min-width: 1200px) {
+    .video-container {
+        max-width: 900px;
+        margin: 0 auto 2rem auto;
+    }
+}
+
+/* Improve video loading state */
+.video-container {
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

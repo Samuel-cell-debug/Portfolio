@@ -1,3 +1,9 @@
+#!/bin/bash
+
+echo "🚀 Applying complete fix for all errors..."
+
+# 1. Fix the JavaScript errors first
+cat > script.js << 'JS'
 // Fixed JavaScript - No errors
 document.addEventListener('DOMContentLoaded', function() {
     console.log('✅ Portfolio loaded successfully');
@@ -130,3 +136,51 @@ function fixGoogleDriveIframe() {
 fixGoogleDriveIframe();
 
 // No init() call at the bottom - that was causing the error
+JS
+
+# 2. Fix the HTML to use reliable image sources
+sed -i 's|profile-placeholder.jpg|https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face|g' index.html
+sed -i 's|1558002038-1055900df638|1551288049-bebda4e38f71|g' index.html
+
+# 3. Fix Google Drive iframe issue by adding proper attributes
+sed -i 's|<iframe src="https://drive.google.com/file/d/13fMTOYU9eH2AFtB1HNX2Y6xHznJImKo3/preview"|<iframe src="https://drive.google.com/file/d/13fMTOYU9eH2AFtB1HNX2Y6xHznJImKo3/preview" sandbox="allow-scripts allow-same-origin"|g' index.html
+
+# 4. Add a simple video alternative section
+cat >> index.html << 'HTML'
+
+<!-- Video Alternative Section -->
+<section class="section-alternative bg-light py-5">
+    <div class="container text-center">
+        <h3>Having trouble with the video?</h3>
+        <p>You can also watch my elevator pitch directly on Google Drive:</p>
+        <a href="https://drive.google.com/file/d/13fMTOYU9eH2AFtB1HNX2Y6xHznJImKo3/view" 
+           target="_blank" 
+           class="btn btn-primary">
+           <i class="fas fa-external-link-alt me-2"></i>Open Video on Google Drive
+        </a>
+    </div>
+</section>
+HTML
+
+# 5. Add the alternative section CSS
+cat >> styles.css << 'CSS'
+/* Alternative section styles */
+.section-alternative {
+    background: #f8f9fa !important;
+}
+
+.section-alternative h3 {
+    color: #2563eb;
+    margin-bottom: 1rem;
+}
+CSS
+
+echo "✅ Complete fix applied!"
+echo "📋 Fixed issues:"
+echo "✅ JavaScript init() error"
+echo "✅ Broken image loading"
+echo "✅ Google Drive iframe CSP issues"
+echo "✅ Added video alternative section"
+echo ""
+echo "🚀 Push the fixes:"
+echo "git add . && git commit -m 'FIX: JavaScript errors and image loading issues' && git push origin main"

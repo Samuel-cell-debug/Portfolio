@@ -735,3 +735,12 @@ html {
 section {
     scroll-margin-top: 80px;
 }
+/* Alternative section styles */
+.section-alternative {
+    background: #f8f9fa !important;
+}
+
+.section-alternative h3 {
+    color: #2563eb;
+    margin-bottom: 1rem;
+}
