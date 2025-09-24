@@ -371,3 +371,17 @@ a, button, .nav-link { transition: all 0.2s ease; }
     align-items: center;
     justify-content: center;
 }
+
+/* ===== ENHANCED COLOR PALETTE ===== */
+:root {
+    --primary-blue: #2563eb;
+    --terracotta: #ea580c;
+    --accent-green: #16a34a;
+    --dark-blue: #1e40af;
+    --light-beige: #fef3c7;
+}
+
+.skill-percentage { color: var(--terracotta); font-weight: 600; font-size: 0.9rem; }
+.btn:hover { transform: translateY(-2px) scale(1.02); transition: all 0.2s ease; }
+.card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.15); }
+a, button, .nav-link { transition: all 0.2s ease; }
