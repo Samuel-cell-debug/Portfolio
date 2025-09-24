@@ -306,3 +306,52 @@ footer {
 .btn:hover { transform: translateY(-2px) scale(1.02); transition: all 0.2s ease; }
 .card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.15); }
 a, button, .nav-link { transition: all 0.2s ease; }
+
+/* ===== ELEVATOR PITCH VIDEO STYLES ===== */
+.video-container {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    margin-bottom: 2rem;
+    transition: all 0.3s ease;
+    background: linear-gradient(135deg, var(--primary-blue), var(--terracotta));
+    padding: 3px;
+}
+
+.video-container iframe {
+    border-radius: 13px;
+    border: none;
+}
+
+.video-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+}
+
+/* Video section background */
+#elevator-pitch {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .video-container {
+        margin: 0 10px;
+    }
+    
+    .video-container iframe {
+        height: 250px;
+    }
+}
+
+/* Loading state */
+.video-container::before {
+    content: "Loading video...";
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--primary-blue);
+    font-weight: bold;
+}
