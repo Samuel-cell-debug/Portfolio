@@ -224,3 +224,29 @@ window.addEventListener('load', function() {
         document.body.style.opacity = '1';
     }, 100);
 });
+
+// Fix image loading issues
+function handleImageLoading() {
+    const images = document.querySelectorAll('img');
+    
+    images.forEach(img => {
+        // Check if image is already loaded
+        if (img.complete) {
+            img.setAttribute('loaded', 'true');
+        } else {
+            img.addEventListener('load', function() {
+                this.setAttribute('loaded', 'true');
+            });
+            
+            img.addEventListener('error', function() {
+                // If image fails to load, use fallback
+                console.log('Image failed to load:', this.src);
+                this.src = 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face';
+                this.setAttribute('loaded', 'true');
+            });
+        }
+    });
+}
+
+// Call this function after DOM loads
+document.addEventListener('DOMContentLoaded', handleImageLoading);
